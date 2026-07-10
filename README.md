@@ -1,25 +1,35 @@
-# Página profesional - Alejandro Quintero Andrade
+# AQ/1 - Alejandro Quintero
 
-Este paquete contiene una página web estática lista para publicar.
+Versión 3.1 de la marca profesional AQ/1.
 
-## Archivos
+## Idea central
 
-- `index.html`: contenido de la página.
-- `styles.css`: estilos visuales y diseño responsive.
-- `script.js`: menú móvil y animaciones suaves.
-- `assets/CV_Alejandro_Quintero_Andrade.pdf`: CV descargable.
+**Las mejores soluciones son las que las personas disfrutan usar.**
 
-## Cómo verla localmente
+AQ/1 presenta a Alejandro Quintero como un profesional capaz de conectar tres dimensiones:
 
-Abre `index.html` en el navegador.
+- Sistemas que funcionan.
+- Equipos que crecen.
+- Ejecución real en campo.
 
-## Cómo publicarla
+## Cambios v3.2
 
-Puedes subir todos los archivos a Netlify, Vercel, GitHub Pages, cPanel o cualquier hosting estático.
+- Nuevo mensaje principal del hero.
+- Slogan visible sin saturar el inicio.
+- Franja superior con tres dimensiones: resolver, formar y ejecutar.
+- Caso principal más claro en formato reto / intervención / resultado.
+- Sección de equipos fortalecida con valores concretos.
+- Certificado de diversidad, inclusión y pertenencia agregado como respaldo en assets/certificados.
 
-## Ajustes recomendados antes de publicar
+## Publicación sugerida
 
-1. Agregar enlace real de LinkedIn si existe.
-2. Reemplazar el CV dentro de `assets/` si se actualiza.
-3. Configurar dominio propio, por ejemplo: `alejandroquintero.tech`.
-4. No agregar capturas con datos internos, clientes, rutas NAS, correos reales de campañas o información sensible.
+1. Subir a GitHub.
+2. Probar con GitHub Pages.
+3. Revisar versión móvil.
+4. Ajustar textos finales antes de dominio propio.
+
+
+## Cambios v3.2
+- Hero con titular más contenido.
+- Cambio de “Hago” a “Hacer”.
+- Slogan movido debajo del título y con mayor contraste.
