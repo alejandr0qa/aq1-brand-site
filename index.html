@@ -3,26 +3,68 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AQ/1 — Alejandro Quintero</title>
-  <meta name="description" content="AQ/1 es la marca profesional de Alejandro Quintero: soluciones que simplifican procesos, fortalecen equipos y generan resultados medibles." />
+
+  <!-- ── SEO básico ──────────────────────────────────────── -->
+  <title>AQ/1 — Alejandro Quintero | Posicionamiento Profesional</title>
+  <meta name="description" content="AQ/1 es la marca profesional de Alejandro Quintero: liderazgo técnico, automatización de procesos, infraestructura y equipos que generan resultados medibles." />
   <meta name="author" content="Alejandro Quintero Andrade" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://aq1.pro/" />
+
+  <!-- ── Open Graph ──────────────────────────────────────── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aq1.pro/" />
   <meta property="og:title" content="AQ/1 — Alejandro Quintero" />
   <meta property="og:description" content="Las mejores soluciones son las que las personas disfrutan usar." />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#0b1020" />
+  <meta property="og:image" content="https://aq1.pro/assets/og-image.png" />
+  <meta property="og:locale" content="es_CO" />
+
+  <!-- ── Theme color ─────────────────────────────────────── -->
+  <meta name="theme-color" content="#080c18" />
+
+  <!-- ── Schema.org Person ───────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alejandro Quintero Andrade",
+    "alternateName": "AQ/1",
+    "jobTitle": "Especialista en Infraestructura, Automatización y Liderazgo Técnico",
+    "url": "https://aq1.pro/",
+    "email": "alejandro.qa@gmail.com",
+    "telephone": "+573213965869",
+    "knowsAbout": ["Infraestructura TI", "Automatización de procesos", "Microsoft 365", "Soporte técnico", "Liderazgo de equipos", "Ciberseguridad", "Cloud computing"]
+  }
+  </script>
+
+  <!-- ── Google Fonts ─────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
-  <div class="progress" id="progress"></div>
 
+  <!-- ── Skip to content (accesibilidad de teclado) ──────── -->
+  <a class="skip-link" href="#contenido-principal">Ir al contenido principal</a>
+
+  <!-- ── Noise overlay ────────────────────────────────────── -->
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- ── Scroll progress ──────────────────────────────────── -->
+  <div class="progress" id="progress" role="progressbar" aria-hidden="true"></div>
+
+  <!-- ── Header ───────────────────────────────────────────── -->
   <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="Volver al inicio">
+    <a class="brand" href="#top" aria-label="AQ/1 — Ir al inicio">
       <span class="brand-mark">AQ/1</span>
       <span class="brand-name">Alejandro Quintero</span>
     </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">Menu</button>
-    <nav class="nav" id="nav">
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav">
+      Menú
+    </button>
+    <nav class="nav" id="nav" aria-label="Navegación principal">
       <a href="#idea">Idea</a>
       <a href="#impacto">Impacto</a>
       <a href="#casos">Casos</a>
@@ -32,7 +74,10 @@
     </nav>
   </header>
 
-  <main>
+  <!-- ── Contenido principal ──────────────────────────────── -->
+  <main id="contenido-principal">
+
+    <!-- ── Hero ─────────────────────────────────────────── -->
     <section class="hero section" aria-labelledby="heroTitle">
       <div class="hero-grid">
         <div class="hero-copy reveal">
@@ -41,7 +86,7 @@
           <p class="lead">Diseño soluciones que simplifican procesos, fortalecen equipos y convierten problemas complejos en operaciones claras, medibles y sostenibles.</p>
           <div class="hero-actions">
             <a class="btn primary" href="#casos">Ver casos de éxito</a>
-            <a class="btn ghost" href="assets/CV_Alejandro_Quintero.pdf" download>Descargar CV</a>
+            <a class="btn ghost" href="assets/CV_Alejandro_Quintero.pdf" download aria-label="Descargar CV en PDF">Descargar CV</a>
           </div>
         </div>
         <div class="hero-visual reveal" aria-hidden="true">
@@ -60,6 +105,7 @@
       </div>
     </section>
 
+    <!-- ── La idea ───────────────────────────────────────── -->
     <section class="section manifesto" id="idea" aria-labelledby="ideaTitle">
       <div class="section-kicker reveal">La idea</div>
       <div class="manifesto-panel reveal">
@@ -69,45 +115,47 @@
       </div>
       <div class="principles">
         <article class="principle reveal">
-          <span>01</span>
+          <span aria-hidden="true">01</span>
           <h3>Entender antes de construir</h3>
           <p>Nunca empiezo por la herramienta. Empiezo por el problema, las personas y el impacto esperado.</p>
         </article>
         <article class="principle reveal">
-          <span>02</span>
+          <span aria-hidden="true">02</span>
           <h3>Las personas primero</h3>
           <p>Una solución solo es buena cuando facilita el trabajo de quienes la usan todos los días.</p>
         </article>
         <article class="principle reveal">
-          <span>03</span>
+          <span aria-hidden="true">03</span>
           <h3>Equipos que crecen</h3>
           <p>No busco que dependan de mí. Busco dejar criterio, atención al detalle y orgullo por servir bien.</p>
         </article>
         <article class="principle reveal">
-          <span>04</span>
+          <span aria-hidden="true">04</span>
           <h3>La simplicidad gana</h3>
           <p>La mejor arquitectura no es la más compleja; es la que se entiende, se mantiene y se mejora.</p>
         </article>
       </div>
     </section>
 
+    <!-- ── Perfil dual ────────────────────────────────────── -->
     <section class="section split" id="perfil" aria-labelledby="perfilTitle">
       <div class="split-copy reveal">
-        <p class="eyebrow">Dos niveles, una misma intención</p>
-        <h2 id="perfilTitle">Puedo liderar una conversación estratégica y también montar el servidor.</h2>
+        <p class="eyebrow">Dos niveles, una sola intención</p>
+        <h2 id="perfilTitle">Entiendo el negocio. Ejecuto en campo. La brecha entre ambos es donde mejor trabajo.</h2>
       </div>
       <div class="dual-panel reveal">
         <div>
           <h3>Visión</h3>
-          <p>Continuidad operativa, reducción de costos, automatización, ciberseguridad, procesos y acompañamiento de equipos.</p>
+          <p>Continuidad operativa, reducción de costos, automatización, ciberseguridad y acompañamiento de equipos con criterio estratégico.</p>
         </div>
         <div>
           <h3>Ejecución</h3>
-          <p>Soporte en campo, cableado, CCTV, redes, servidores, Microsoft 365, virtualización, cloud y operación diaria.</p>
+          <p>Soporte en campo, redes, servidores, Microsoft 365, virtualización, cloud y operación diaria con responsabilidad por el resultado.</p>
         </div>
       </div>
     </section>
 
+    <!-- ── Impacto medible ────────────────────────────────── -->
     <section class="section impact" id="impacto" aria-labelledby="impactoTitle">
       <div class="section-heading reveal">
         <p class="eyebrow">Impacto medible</p>
@@ -115,44 +163,57 @@
       </div>
       <div class="metrics">
         <article class="metric reveal">
-          <strong data-count="300">0</strong><span>%+</span>
+          <div class="metric-number">
+            <strong data-count="300" aria-label="300 por ciento">0</strong><span class="metric-suffix">%+</span>
+          </div>
           <p>más capacidad operativa en proceso documental de cobranzas.</p>
+          <p class="metric-context">Basado en tiempo promedio de procesamiento antes y después de la implementación.</p>
         </article>
         <article class="metric reveal">
-          <strong data-count="40">0</strong><span>%</span>
+          <div class="metric-number">
+            <strong data-count="40" aria-label="40 por ciento">0</strong><span class="metric-suffix">%</span>
+          </div>
           <p>reducción en costos de telecomunicaciones mediante optimización.</p>
+          <p class="metric-context">Medido sobre facturación mensual de servicios consolidados.</p>
         </article>
         <article class="metric reveal">
-          <strong data-count="30">0</strong><span>%</span>
+          <div class="metric-number">
+            <strong data-count="30" aria-label="30 por ciento">0</strong><span class="metric-suffix">%</span>
+          </div>
           <p>ahorro en servicios cloud y recursos tecnológicos.</p>
+          <p class="metric-context">Resultado de migración, consolidación y negociación de licencias.</p>
         </article>
         <article class="metric reveal">
-          <strong data-count="240">0</strong><span>+</span>
+          <div class="metric-number">
+            <strong data-count="240" aria-label="240 o más">0</strong><span class="metric-suffix">+</span>
+          </div>
           <p>puntos de atención soportados en operación distribuida.</p>
+          <p class="metric-context">Sedes, estaciones y usuarios activos en operación simultánea.</p>
         </article>
       </div>
     </section>
 
+    <!-- ── Casos de éxito ─────────────────────────────────── -->
     <section class="section cases" id="casos" aria-labelledby="casosTitle">
       <div class="section-heading reveal">
         <p class="eyebrow">Casos de éxito</p>
-        <h2 id="casosTitle">Historias de problemas convertidos en soluciones.</h2>
-        <p class="section-note">Los casos están anonimizados para proteger información interna. El foco está en el reto, el criterio y el resultado.</p>
+        <h2 id="casosTitle">Problemas reales. Soluciones que se quedaron funcionando.</h2>
+        <p class="section-note">Los casos están anonimizados para proteger información interna. El foco está en el reto, el criterio aplicado y el resultado obtenido.</p>
       </div>
 
       <article class="case featured reveal">
-        <div class="case-index">Caso 01</div>
+        <div class="case-index" aria-label="Caso número uno">Caso 01</div>
         <div class="case-body">
           <h3>Cuando automatizar significó devolverle tiempo a un equipo.</h3>
           <p>Un proceso documental de cobranzas exigía revisar bases, generar comunicaciones, producir documentos y controlar envíos de forma manual. La operación consumía tiempo valioso que debía estar dedicado a la gestión efectiva con clientes.</p>
           <div class="case-columns">
             <div>
               <h4>Enfoque</h4>
-              <p>Diseñé una solución automatizada con reglas de negocio, generación documental, trazabilidad, control de errores y operación local.</p>
+              <p>Diseñé una solución con reglas de negocio, generación documental, trazabilidad, control de errores y operación local. Primero el proceso. Después la herramienta.</p>
             </div>
             <div>
               <h4>Resultado</h4>
-              <p>Incremento superior al 300 % en capacidad operativa, menos trabajo repetitivo y más tiempo para actividades de recuperación de cartera.</p>
+              <p>Incremento superior al 300&nbsp;% en capacidad operativa, menos trabajo repetitivo y más tiempo para actividades de recuperación de cartera.</p>
             </div>
           </div>
         </div>
@@ -160,71 +221,104 @@
 
       <div class="case-grid">
         <article class="case reveal">
-          <span>02</span>
-          <h3>Automatización del ciclo documental de compras</h3>
+          <span aria-hidden="true">02</span>
+          <h3>Ciclo documental de compras</h3>
           <p>Clasificación, validaciones y control de excepciones para reducir revisión manual y mejorar trazabilidad operativa.</p>
         </article>
         <article class="case reveal">
-          <span>03</span>
+          <span aria-hidden="true">03</span>
           <h3>Optimización de infraestructura y costos</h3>
           <p>Modernización de conectividad, nube y servicios para mejorar disponibilidad y reducir gasto operativo.</p>
         </article>
         <article class="case reveal">
-          <span>04</span>
+          <span aria-hidden="true">04</span>
           <h3>Plataforma omnicanal de notificaciones</h3>
           <p>Integración de comunicaciones automáticas con control de envío, normalización de datos y seguimiento.</p>
         </article>
         <article class="case reveal">
-          <span>05</span>
+          <span aria-hidden="true">05</span>
           <h3>Soporte integral en campo</h3>
-          <p>Resolución de incidencias reales: equipos, redes, cableado, CCTV, servidores, usuarios y continuidad del servicio.</p>
+          <p>Resolución de incidencias reales: redes, servidores, usuarios y continuidad del servicio. Siempre con documentación.</p>
         </article>
       </div>
     </section>
 
+    <!-- ── Equipos ────────────────────────────────────────── -->
     <section class="section teams" id="equipos" aria-labelledby="equiposTitle">
       <div class="section-heading reveal">
         <p class="eyebrow">Liderazgo que deja huella</p>
         <h2 id="equiposTitle">El resultado no termina cuando el sistema funciona. Termina cuando el equipo crece.</h2>
       </div>
       <div class="teams-panel reveal">
-        <blockquote>“Un buen técnico resuelve una incidencia. Un buen guía ayuda a que el siguiente también sepa resolverla.”</blockquote>
-        <p>Mi forma de liderar se basa en formar criterio: atención al detalle, cuidado por el usuario, comunicación clara, documentación y responsabilidad por el resultado. Cuando alguien trabaja conmigo, quiero que salga mejor preparado, con bases sólidas y con mentalidad de comerse el mundo.</p>
+        <!-- Pull-quote: frase de autoría propia, no cita de tercero -->
+        <p class="pull-quote">
+          "Un buen técnico resuelve una incidencia. Un buen guía ayuda a que el siguiente también sepa resolverla."
+          <span class="pull-quote-attr">— AQ/1</span>
+        </p>
+        <p>Mi forma de liderar se basa en formar criterio: atención al detalle, cuidado por el usuario, comunicación clara, documentación y responsabilidad por el resultado. Cuando alguien trabaja conmigo, quiero que salga mejor preparado — con bases sólidas y con ganas de comerse el mundo.</p>
       </div>
     </section>
 
-    <section class="section process" aria-labelledby="processTitle">
+    <!-- ── Cómo pienso (3 pilares, sin revelar metodología) ─ -->
+    <section class="section" id="criterio" aria-labelledby="criterioTitle">
       <div class="section-heading reveal">
         <p class="eyebrow">Cómo pienso</p>
-        <h2 id="processTitle">El método cambia según el reto. El orden no.</h2>
+        <h2 id="criterioTitle">El método cambia según el reto. La intención no.</h2>
+        <p class="section-note">No trabajo con recetas. Trabajo con criterio.</p>
       </div>
-      <div class="process-line reveal">
-        <div><span>01</span>Escuchar</div>
-        <div><span>02</span>Entender</div>
-        <div><span>03</span>Simplificar</div>
-        <div><span>04</span>Diseñar</div>
-        <div><span>05</span>Ejecutar</div>
-        <div><span>06</span>Medir</div>
-        <div><span>07</span>Documentar</div>
-        <div><span>08</span>Mejorar</div>
+      <div class="thinking-pillars">
+        <div class="pillar reveal">
+          <span class="pillar-num">I</span>
+          <h3>Escuchar primero</h3>
+          <p>El problema visible rara vez es el problema real. Antes de proponer cualquier solución, me tomo el tiempo necesario para entender el contexto, las personas y el impacto esperado.</p>
+        </div>
+        <div class="pillar reveal">
+          <span class="pillar-num">II</span>
+          <h3>Diseñar para durar</h3>
+          <p>Prefiero soluciones que el equipo pueda operar, mantener y mejorar sin depender de mí. La verdadera medida del éxito es lo que queda funcionando cuando me voy.</p>
+        </div>
+        <div class="pillar reveal">
+          <span class="pillar-num">III</span>
+          <h3>Medir y aprender</h3>
+          <p>Sin métricas, no hay claridad. Sin documentación, no hay continuidad. Cada solución que diseño incluye la forma de saber si está funcionando y cómo mejorarla.</p>
+        </div>
       </div>
     </section>
 
+    <!-- ── Laboratorio ────────────────────────────────────── -->
     <section class="section lab" id="laboratorio" aria-labelledby="labTitle">
       <div class="section-heading reveal">
         <p class="eyebrow">Laboratorio AQ/1</p>
         <h2 id="labTitle">Herramientas, aprendizaje y criterio técnico.</h2>
         <p class="section-note">Las herramientas cambian. Lo importante es saber cuándo usarlas, cómo integrarlas y cómo dejarlas funcionando.</p>
       </div>
-      <div class="tool-cloud reveal" aria-label="Caja de herramientas">
-        <span>Infraestructura</span><span>Soporte</span><span>Microsoft 365</span><span>Windows Server</span><span>Linux</span><span>Docker</span><span>n8n</span><span>IA aplicada</span><span>Fortinet</span><span>Sophos</span><span>AWS</span><span>VMware</span><span>LAN/WAN</span><span>VPN</span><span>CCTV</span><span>NAS</span><span>Automatización</span><span>Documentación</span>
+      <div class="tool-cloud reveal" aria-label="Caja de herramientas tecnológicas">
+        <span>Infraestructura</span>
+        <span>Soporte</span>
+        <span>Microsoft 365</span>
+        <span>Windows Server</span>
+        <span>Linux</span>
+        <span>Docker</span>
+        <span>n8n</span>
+        <span>IA aplicada</span>
+        <span>Fortinet</span>
+        <span>Sophos</span>
+        <span>AWS</span>
+        <span>VMware</span>
+        <span>LAN / WAN</span>
+        <span>VPN</span>
+        <span>CCTV</span>
+        <span>NAS</span>
+        <span>Automatización</span>
+        <span>Documentación</span>
       </div>
     </section>
 
-    <section class="section articles" id="articulos" aria-labelledby="articlesTitle">
+    <!-- ── Perspectivas ───────────────────────────────────── -->
+    <section class="section articles" id="perspectivas" aria-labelledby="perspectivasTitle">
       <div class="section-heading reveal">
-        <p class="eyebrow">Próximos artículos</p>
-        <h2 id="articlesTitle">Ideas que merecen ser contadas.</h2>
+        <p class="eyebrow">Perspectivas</p>
+        <h2 id="perspectivasTitle">Ideas que merecen ser contadas.</h2>
       </div>
       <div class="article-grid">
         <article class="article reveal">
@@ -233,7 +327,7 @@
         </article>
         <article class="article reveal">
           <h3>Cuando el proceso es el verdadero servidor caído</h3>
-          <p>Una mirada práctica a los cuellos de botella que no se ven en el monitoreo.</p>
+          <p>Una mirada práctica a los cuellos de botella que no aparecen en el monitoreo.</p>
         </article>
         <article class="article reveal">
           <h3>Soporte técnico con mentalidad de guía</h3>
@@ -242,23 +336,27 @@
       </div>
     </section>
 
+    <!-- ── Contacto ───────────────────────────────────────── -->
     <section class="section contact" id="contacto" aria-labelledby="contactTitle">
       <div class="contact-card reveal">
         <p class="eyebrow">Hablemos</p>
         <h2 id="contactTitle">¿Tienes un problema que vale la pena entender?</h2>
         <p>Me interesa participar en retos donde la tecnología tenga un propósito claro: facilitar el trabajo de las personas, fortalecer equipos y generar resultados medibles.</p>
         <div class="contact-actions">
-          <a class="btn primary" href="mailto:alejandro.qa@gmail.com">alejandro.qa@gmail.com</a>
-          <a class="btn ghost" href="tel:+573213965869">+57 321 396 5869</a>
-          <a class="btn ghost" href="assets/CV_Alejandro_Quintero.pdf" download>CV PDF</a>
+          <a class="btn primary" href="mailto:alejandro.qa@gmail.com" aria-label="Enviar correo a alejandro.qa@gmail.com">alejandro.qa@gmail.com</a>
+          <a class="btn ghost" href="tel:+573213965869" aria-label="Llamar al +57 321 396 5869">+57 321 396 5869</a>
+          <a class="btn ghost" href="assets/CV_Alejandro_Quintero.pdf" download aria-label="Descargar CV de Alejandro Quintero en PDF">CV PDF</a>
         </div>
       </div>
     </section>
+
   </main>
 
-  <footer class="footer">
-    <span>AQ/1 · Alejandro Quintero</span>
+  <!-- ── Footer ────────────────────────────────────────────── -->
+  <footer class="footer" role="contentinfo">
+    <span class="footer-brand">AQ/1 · Alejandro Quintero</span>
     <span>Las mejores soluciones son las que las personas disfrutan usar.</span>
+    <span aria-label="Año de publicación">© <time datetime="2026">2026</time></span>
   </footer>
 
   <script src="script.js"></script>
