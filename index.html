@@ -3,284 +3,262 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Alejandro Quintero Andrade | Profesional de TI</title>
-  <meta name="description" content="Perfil profesional de Alejandro Quintero Andrade: infraestructura TI, soporte, automatización de procesos, redes y ciberseguridad." />
+  <title>AQ/1 — Alejandro Quintero</title>
+  <meta name="description" content="AQ/1 es la marca profesional de Alejandro Quintero: soluciones que simplifican procesos, fortalecen equipos y generan resultados medibles." />
   <meta name="author" content="Alejandro Quintero Andrade" />
-  <meta property="og:title" content="Alejandro Quintero Andrade | Profesional de TI" />
-  <meta property="og:description" content="Infraestructura, soporte, automatización y mejora de procesos TI." />
+  <meta property="og:title" content="AQ/1 — Alejandro Quintero" />
+  <meta property="og:description" content="Las mejores soluciones son las que las personas disfrutan usar." />
   <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b1020" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="progress" id="progress"></div>
+
   <header class="site-header" id="top">
-    <nav class="nav" aria-label="Navegación principal">
-      <a class="brand" href="#top" aria-label="Inicio">
-        <span class="brand-mark">AQ</span>
-        <span>Alejandro Quintero</span>
-      </a>
-      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
-      <div class="nav-links">
-        <a href="#perfil">Perfil</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#habilidades">Habilidades</a>
-        <a href="#experiencia">Experiencia</a>
-        <a href="#contacto">Contacto</a>
-      </div>
+    <a class="brand" href="#top" aria-label="Volver al inicio">
+      <span class="brand-mark">AQ/1</span>
+      <span class="brand-name">Alejandro Quintero</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">Menu</button>
+    <nav class="nav" id="nav">
+      <a href="#idea">Idea</a>
+      <a href="#impacto">Impacto</a>
+      <a href="#casos">Casos</a>
+      <a href="#equipos">Equipos</a>
+      <a href="#laboratorio">Laboratorio</a>
+      <a href="#contacto">Contacto</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero section">
-      <div class="hero-content reveal">
-        <p class="eyebrow">Disponible para oportunidades en España / remoto</p>
-        <h1>Profesional de TI especializado en infraestructura, soporte, automatización y mejora de procesos.</h1>
-        <p class="hero-text">
-          Ayudo a mantener servicios tecnológicos operativos, seguros y eficientes mediante soporte a usuarios,
-          administración de infraestructura, redes, ciberseguridad práctica y automatización de tareas repetitivas.
-        </p>
-        <div class="hero-actions">
-          <a class="btn primary" href="assets/CV_Alejandro_Quintero_Andrade.pdf" download>Descargar CV</a>
-          <a class="btn secondary" href="#proyectos">Ver proyectos</a>
+    <section class="hero section" aria-labelledby="heroTitle">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">AQ/1 · Alejandro Quintero</p>
+          <h1 id="heroTitle">Las mejores soluciones son las que las personas disfrutan usar.</h1>
+          <p class="lead">Diseño soluciones que simplifican procesos, fortalecen equipos y convierten problemas complejos en operaciones claras, medibles y sostenibles.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#casos">Ver casos de éxito</a>
+            <a class="btn ghost" href="assets/CV_Alejandro_Quintero.pdf" download>Descargar CV</a>
+          </div>
+        </div>
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="orb orb-a"></div>
+          <div class="orb orb-b"></div>
+          <div class="system-card main-card">
+            <span class="card-label">Principio central</span>
+            <strong>Personas primero</strong>
+            <p>La tecnología tiene valor cuando hace mejor el trabajo de alguien.</p>
+          </div>
+          <div class="mini-card card-1">Entender</div>
+          <div class="mini-card card-2">Diseñar</div>
+          <div class="mini-card card-3">Acompañar</div>
+          <div class="mini-card card-4">Mejorar</div>
         </div>
       </div>
-
-      <aside class="hero-card reveal" aria-label="Resumen profesional">
-        <div class="status">Perfil técnico-operativo</div>
-        <h2>Infraestructura + Soporte + Automatización</h2>
-        <p>
-          Experiencia documentada desde 2016 en entornos corporativos, soporte técnico, redes, servicios cloud,
-          seguridad perimetral y automatización con herramientas locales.
-        </p>
-        <div class="metric-grid">
-          <div><strong>2016+</strong><span>experiencia TI</span></div>
-          <div><strong>240+</strong><span>puntos atendidos</span></div>
-          <div><strong>99,9%</strong><span>disponibilidad</span></div>
-          <div><strong>40%</strong><span>ahorro conectividad</span></div>
-        </div>
-      </aside>
     </section>
 
-    <section class="section split" id="perfil">
+    <section class="section manifesto" id="idea" aria-labelledby="ideaTitle">
+      <div class="section-kicker reveal">La idea</div>
+      <div class="manifesto-panel reveal">
+        <h2 id="ideaTitle">AQ/1 no es un cargo. Es una forma de trabajar.</h2>
+        <p>No creo soluciones para demostrar lo que sé. Las construyo para que las personas puedan dar lo mejor de sí.</p>
+        <p>Me interesa entender antes de actuar, simplificar antes de complicar y dejar equipos más fuertes que cuando empecé a trabajar con ellos.</p>
+      </div>
+      <div class="principles">
+        <article class="principle reveal">
+          <span>01</span>
+          <h3>Entender antes de construir</h3>
+          <p>Nunca empiezo por la herramienta. Empiezo por el problema, las personas y el impacto esperado.</p>
+        </article>
+        <article class="principle reveal">
+          <span>02</span>
+          <h3>Las personas primero</h3>
+          <p>Una solución solo es buena cuando facilita el trabajo de quienes la usan todos los días.</p>
+        </article>
+        <article class="principle reveal">
+          <span>03</span>
+          <h3>Equipos que crecen</h3>
+          <p>No busco que dependan de mí. Busco dejar criterio, atención al detalle y orgullo por servir bien.</p>
+        </article>
+        <article class="principle reveal">
+          <span>04</span>
+          <h3>La simplicidad gana</h3>
+          <p>La mejor arquitectura no es la más compleja; es la que se entiende, se mantiene y se mejora.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section split" id="perfil" aria-labelledby="perfilTitle">
+      <div class="split-copy reveal">
+        <p class="eyebrow">Dos niveles, una misma intención</p>
+        <h2 id="perfilTitle">Puedo liderar una conversación estratégica y también montar el servidor.</h2>
+      </div>
+      <div class="dual-panel reveal">
+        <div>
+          <h3>Visión</h3>
+          <p>Continuidad operativa, reducción de costos, automatización, ciberseguridad, procesos y acompañamiento de equipos.</p>
+        </div>
+        <div>
+          <h3>Ejecución</h3>
+          <p>Soporte en campo, cableado, CCTV, redes, servidores, Microsoft 365, virtualización, cloud y operación diaria.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section impact" id="impacto" aria-labelledby="impactoTitle">
       <div class="section-heading reveal">
-        <p class="eyebrow">Perfil</p>
-        <h2>Un perfil amplio, práctico y orientado a resolver.</h2>
+        <p class="eyebrow">Impacto medible</p>
+        <h2 id="impactoTitle">Resultados que hablan más que una lista de herramientas.</h2>
       </div>
-      <div class="content-card reveal">
-        <p>
-          Soy Ingeniero de Sistemas y Especialista en Gerencia de Proyectos, con trayectoria en soporte técnico,
-          infraestructura tecnológica, administración de plataformas, redes, seguridad y automatización de procesos.
-        </p>
-        <p>
-          Mi enfoque combina trabajo operativo en campo con visión de mejora continua: atiendo incidencias, documento
-          procedimientos, coordino proveedores, apoyo usuarios y construyo soluciones que reducen tareas manuales.
-        </p>
-        <p class="note">
-          Busco oportunidades donde pueda aportar en soporte, sistemas, infraestructura, continuidad operativa,
-          automatización y mejora de servicios TI.
-        </p>
-      </div>
-    </section>
-
-    <section class="section" id="proyectos">
-      <div class="section-heading reveal centered">
-        <p class="eyebrow">Proyectos destacados</p>
-        <h2>Casos de trabajo anonimizados</h2>
-        <p>
-          Algunos proyectos se presentan sin datos sensibles, rutas internas, nombres de clientes ni información confidencial.
-        </p>
-      </div>
-
-      <div class="project-grid">
-        <article class="project-card reveal">
-          <span class="tag">Automatización</span>
-          <h3>Flujo de cobranzas con n8n</h3>
-          <p>
-            Automatización local para procesar bases en Excel, generar cartas PDF, enviar correos personalizados y
-            mantener trazabilidad de envíos y errores.
-          </p>
-          <ul>
-            <li>n8n self-hosted, LibreOffice, NAS, correo y PDF.</li>
-            <li>Reducción de tareas manuales repetitivas.</li>
-            <li>Control operativo para lotes y reportes.</li>
-          </ul>
+      <div class="metrics">
+        <article class="metric reveal">
+          <strong data-count="300">0</strong><span>%+</span>
+          <p>más capacidad operativa en proceso documental de cobranzas.</p>
         </article>
-
-        <article class="project-card reveal">
-          <span class="tag">Procesos TI</span>
-          <h3>Validación de facturas y órdenes de compra</h3>
-          <p>
-            Diseño de flujo para clasificar facturas, validar proveedores, consultar órdenes de compra y manejar
-            excepciones editables por el equipo operativo.
-          </p>
-          <ul>
-            <li>Reglas por proveedor, concepto y responsable.</li>
-            <li>Repositorio de configuración en archivos locales.</li>
-            <li>Menos revisión manual y mejor trazabilidad.</li>
-          </ul>
+        <article class="metric reveal">
+          <strong data-count="40">0</strong><span>%</span>
+          <p>reducción en costos de telecomunicaciones mediante optimización.</p>
         </article>
-
-        <article class="project-card reveal">
-          <span class="tag">Mensajería</span>
-          <h3>Integración WhatsApp con OpenWA</h3>
-          <p>
-            Integración mediante API local para envío de mensajes operativos, normalización de números y control de
-            entregas desde flujos automatizados.
-          </p>
-          <ul>
-            <li>API local, sesiones, chatId y prefijo internacional.</li>
-            <li>Separación entre bases de correo y WhatsApp.</li>
-            <li>Auditoría básica de envíos.</li>
-          </ul>
+        <article class="metric reveal">
+          <strong data-count="30">0</strong><span>%</span>
+          <p>ahorro en servicios cloud y recursos tecnológicos.</p>
         </article>
-
-        <article class="project-card reveal">
-          <span class="tag">Infraestructura</span>
-          <h3>Optimización de conectividad y servicios cloud</h3>
-          <p>
-            Apoyo en modernización de infraestructura, administración de servicios críticos, optimización de costos y
-            refuerzo de seguridad con plataformas empresariales.
-          </p>
-          <ul>
-            <li>SD-WAN Secure, AWS, Fortinet y Sophos.</li>
-            <li>Mejora de continuidad operativa.</li>
-            <li>Disponibilidad y monitoreo preventivo.</li>
-          </ul>
-        </article>
-
-        <article class="project-card reveal">
-          <span class="tag">Campo</span>
-          <h3>Soporte técnico, redes y CCTV</h3>
-          <p>
-            Atención presencial y remota para equipos, usuarios, conectividad, puntos de red, cableado estructurado y
-            sistemas básicos de videovigilancia.
-          </p>
-          <ul>
-            <li>Microinformática, impresoras, routers y switches.</li>
-            <li>Cableado UTP, conectores RJ45 y puntos de red.</li>
-            <li>CCTV, DVR/NVR y revisión de conectividad.</li>
-          </ul>
-        </article>
-
-        <article class="project-card reveal">
-          <span class="tag">Laboratorio</span>
-          <h3>Seguridad, vulnerabilidades y Honey-SOC</h3>
-          <p>
-            Trabajo de laboratorio con herramientas de análisis, gestión de vulnerabilidades y monitoreo de eventos para
-            fortalecer capacidades de ciberseguridad defensiva.
-          </p>
-          <ul>
-            <li>OpenVAS/Greenbone, Nuclei, Wazuh y ZAP.</li>
-            <li>Autonomous Honey-SOC como proyecto técnico personal.</li>
-            <li>Enfoque defensivo, documentación y pruebas controladas.</li>
-          </ul>
+        <article class="metric reveal">
+          <strong data-count="240">0</strong><span>+</span>
+          <p>puntos de atención soportados en operación distribuida.</p>
         </article>
       </div>
     </section>
 
-    <section class="section" id="habilidades">
-      <div class="section-heading reveal centered">
-        <p class="eyebrow">Habilidades</p>
-        <h2>Áreas donde aporto valor</h2>
-      </div>
-      <div class="skills-layout">
-        <div class="skill-box reveal">
-          <h3>Soporte y sistemas</h3>
-          <p>Help Desk, Service Desk, soporte presencial/remoto, N1/N2/N3, microinformática, Windows, Windows Server, Microsoft 365, Outlook y Teams.</p>
-        </div>
-        <div class="skill-box reveal">
-          <h3>Redes y campo</h3>
-          <p>LAN/WAN, Wi-Fi, VPN, routers, switches, access points, cableado estructurado, puntos de red, RJ45, CCTV, DVR y NVR.</p>
-        </div>
-        <div class="skill-box reveal">
-          <h3>Infraestructura y seguridad</h3>
-          <p>Fortinet, Sophos, endpoint protection, Zimbra, VMware, AWS, NAS, continuidad operativa, monitoreo y documentación técnica.</p>
-        </div>
-        <div class="skill-box reveal">
-          <h3>Automatización</h3>
-          <p>n8n self-hosted, flujos con Excel, PDF, correo, APIs locales, archivos compartidos, reportes operativos y mejora de procesos.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section split" id="experiencia">
+    <section class="section cases" id="casos" aria-labelledby="casosTitle">
       <div class="section-heading reveal">
-        <p class="eyebrow">Experiencia</p>
-        <h2>Trayectoria profesional</h2>
+        <p class="eyebrow">Casos de éxito</p>
+        <h2 id="casosTitle">Historias de problemas convertidos en soluciones.</h2>
+        <p class="section-note">Los casos están anonimizados para proteger información interna. El foco está en el reto, el criterio y el resultado.</p>
       </div>
-      <div class="timeline reveal">
-        <article>
-          <span>Mar 2020 - Actualidad</span>
-          <h3>Líder de Infraestructura y Servicios</h3>
-          <p>
-            Administración de infraestructura, soporte avanzado, continuidad operativa, proveedores, seguridad perimetral,
-            servicios cloud y proyectos de automatización de procesos internos.
-          </p>
+
+      <article class="case featured reveal">
+        <div class="case-index">Caso 01</div>
+        <div class="case-body">
+          <h3>Cuando automatizar significó devolverle tiempo a un equipo.</h3>
+          <p>Un proceso documental de cobranzas exigía revisar bases, generar comunicaciones, producir documentos y controlar envíos de forma manual. La operación consumía tiempo valioso que debía estar dedicado a la gestión efectiva con clientes.</p>
+          <div class="case-columns">
+            <div>
+              <h4>Enfoque</h4>
+              <p>Diseñé una solución automatizada con reglas de negocio, generación documental, trazabilidad, control de errores y operación local.</p>
+            </div>
+            <div>
+              <h4>Resultado</h4>
+              <p>Incremento superior al 300 % en capacidad operativa, menos trabajo repetitivo y más tiempo para actividades de recuperación de cartera.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <div class="case-grid">
+        <article class="case reveal">
+          <span>02</span>
+          <h3>Automatización del ciclo documental de compras</h3>
+          <p>Clasificación, validaciones y control de excepciones para reducir revisión manual y mejorar trazabilidad operativa.</p>
         </article>
-        <article>
-          <span>Dic 2018 - Feb 2020</span>
-          <h3>Soporte técnico freelance</h3>
-          <p>
-            Soporte presencial y remoto, mantenimiento de equipos, redes, instalación de software, cableado, conectividad,
-            CCTV, configuración de dispositivos y atención directa a usuarios y pequeñas empresas.
-          </p>
+        <article class="case reveal">
+          <span>03</span>
+          <h3>Optimización de infraestructura y costos</h3>
+          <p>Modernización de conectividad, nube y servicios para mejorar disponibilidad y reducir gasto operativo.</p>
         </article>
-        <article>
-          <span>Sep 2016 - Nov 2018</span>
-          <h3>Coordinador de cuenta de servicios TI</h3>
-          <p>
-            Soporte y coordinación de servicios para operación distribuida, atención de incidencias, documentación técnica,
-            seguimiento de casos y apoyo a puntos de atención a nivel nacional.
-          </p>
+        <article class="case reveal">
+          <span>04</span>
+          <h3>Plataforma omnicanal de notificaciones</h3>
+          <p>Integración de comunicaciones automáticas con control de envío, normalización de datos y seguimiento.</p>
+        </article>
+        <article class="case reveal">
+          <span>05</span>
+          <h3>Soporte integral en campo</h3>
+          <p>Resolución de incidencias reales: equipos, redes, cableado, CCTV, servidores, usuarios y continuidad del servicio.</p>
         </article>
       </div>
     </section>
 
-    <section class="section" id="formacion">
-      <div class="section-heading reveal centered">
-        <p class="eyebrow">Formación</p>
-        <h2>Educación y certificaciones</h2>
+    <section class="section teams" id="equipos" aria-labelledby="equiposTitle">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Liderazgo que deja huella</p>
+        <h2 id="equiposTitle">El resultado no termina cuando el sistema funciona. Termina cuando el equipo crece.</h2>
       </div>
-      <div class="education-grid">
-        <div class="content-card reveal">
-          <h3>Educación formal</h3>
-          <ul class="clean-list">
-            <li>Especialización en Gerencia de Proyectos.</li>
-            <li>Ingeniería de Sistemas.</li>
-            <li>Tecnólogo en Análisis y Desarrollo de Sistemas de Información.</li>
-          </ul>
-        </div>
-        <div class="content-card reveal">
-          <h3>Certificaciones y formación continua</h3>
-          <ul class="clean-list">
-            <li>NSE 3 Network Security Associate - Fortinet.</li>
-            <li>AWS Cloud Foundations.</li>
-            <li>Google Cybersecurity Professional.</li>
-            <li>Google Project Management Professional.</li>
-            <li>Diversidad, inclusión y pertenencia - Harvard Business Impact.</li>
-          </ul>
-        </div>
+      <div class="teams-panel reveal">
+        <blockquote>“Un buen técnico resuelve una incidencia. Un buen guía ayuda a que el siguiente también sepa resolverla.”</blockquote>
+        <p>Mi forma de liderar se basa en formar criterio: atención al detalle, cuidado por el usuario, comunicación clara, documentación y responsabilidad por el resultado. Cuando alguien trabaja conmigo, quiero que salga mejor preparado, con bases sólidas y con mentalidad de comerse el mundo.</p>
       </div>
     </section>
 
-    <section class="section contact" id="contacto">
+    <section class="section process" aria-labelledby="processTitle">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Cómo pienso</p>
+        <h2 id="processTitle">El método cambia según el reto. El orden no.</h2>
+      </div>
+      <div class="process-line reveal">
+        <div><span>01</span>Escuchar</div>
+        <div><span>02</span>Entender</div>
+        <div><span>03</span>Simplificar</div>
+        <div><span>04</span>Diseñar</div>
+        <div><span>05</span>Ejecutar</div>
+        <div><span>06</span>Medir</div>
+        <div><span>07</span>Documentar</div>
+        <div><span>08</span>Mejorar</div>
+      </div>
+    </section>
+
+    <section class="section lab" id="laboratorio" aria-labelledby="labTitle">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Laboratorio AQ/1</p>
+        <h2 id="labTitle">Herramientas, aprendizaje y criterio técnico.</h2>
+        <p class="section-note">Las herramientas cambian. Lo importante es saber cuándo usarlas, cómo integrarlas y cómo dejarlas funcionando.</p>
+      </div>
+      <div class="tool-cloud reveal" aria-label="Caja de herramientas">
+        <span>Infraestructura</span><span>Soporte</span><span>Microsoft 365</span><span>Windows Server</span><span>Linux</span><span>Docker</span><span>n8n</span><span>IA aplicada</span><span>Fortinet</span><span>Sophos</span><span>AWS</span><span>VMware</span><span>LAN/WAN</span><span>VPN</span><span>CCTV</span><span>NAS</span><span>Automatización</span><span>Documentación</span>
+      </div>
+    </section>
+
+    <section class="section articles" id="articulos" aria-labelledby="articlesTitle">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Próximos artículos</p>
+        <h2 id="articlesTitle">Ideas que merecen ser contadas.</h2>
+      </div>
+      <div class="article-grid">
+        <article class="article reveal">
+          <h3>Automatizar no es reemplazar personas</h3>
+          <p>Es liberar tiempo para que hagan trabajo de mayor valor.</p>
+        </article>
+        <article class="article reveal">
+          <h3>Cuando el proceso es el verdadero servidor caído</h3>
+          <p>Una mirada práctica a los cuellos de botella que no se ven en el monitoreo.</p>
+        </article>
+        <article class="article reveal">
+          <h3>Soporte técnico con mentalidad de guía</h3>
+          <p>Atender usuarios no es cerrar tickets: es generar confianza.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contacto" aria-labelledby="contactTitle">
       <div class="contact-card reveal">
-        <p class="eyebrow">Contacto</p>
-        <h2>¿Hablamos?</h2>
-        <p>
-          Estoy abierto a oportunidades en soporte, sistemas, infraestructura, automatización y operaciones TI.
-        </p>
+        <p class="eyebrow">Hablemos</p>
+        <h2 id="contactTitle">¿Tienes un problema que vale la pena entender?</h2>
+        <p>Me interesa participar en retos donde la tecnología tenga un propósito claro: facilitar el trabajo de las personas, fortalecer equipos y generar resultados medibles.</p>
         <div class="contact-actions">
           <a class="btn primary" href="mailto:alejandro.qa@gmail.com">alejandro.qa@gmail.com</a>
-          <a class="btn secondary" href="tel:+573213965869">+57 321 396 5869</a>
+          <a class="btn ghost" href="tel:+573213965869">+57 321 396 5869</a>
+          <a class="btn ghost" href="assets/CV_Alejandro_Quintero.pdf" download>CV PDF</a>
         </div>
-        <p class="fine-print">Cali, Colombia · Disponibilidad para oportunidades en España y remoto.</p>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© <span id="year"></span> Alejandro Quintero Andrade. Perfil profesional sin información confidencial de clientes o empleadores.</p>
-    <a href="#top">Volver arriba</a>
+    <span>AQ/1 · Alejandro Quintero</span>
+    <span>Las mejores soluciones son las que las personas disfrutan usar.</span>
   </footer>
 
   <script src="script.js"></script>

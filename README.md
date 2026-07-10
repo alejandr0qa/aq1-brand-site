@@ -1,25 +1,34 @@
-# Página profesional - Alejandro Quintero Andrade
+# AQ/1 — Alejandro Quintero
 
-Este paquete contiene una página web estática lista para publicar.
+Sitio web estático para marca profesional de Alejandro Quintero.
 
-## Archivos
+## Concepto
 
-- `index.html`: contenido de la página.
-- `styles.css`: estilos visuales y diseño responsive.
-- `script.js`: menú móvil y animaciones suaves.
-- `assets/CV_Alejandro_Quintero_Andrade.pdf`: CV descargable.
+**AQ/1** no es un CV online. Es una marca profesional basada en una idea:
 
-## Cómo verla localmente
+> Las mejores soluciones son las que las personas disfrutan usar.
 
-Abre `index.html` en el navegador.
+## Contenido incluido
 
-## Cómo publicarla
+- `index.html`: estructura del sitio.
+- `styles.css`: diseño visual responsive.
+- `script.js`: animaciones, contador de métricas y navegación móvil.
+- `assets/CV_Alejandro_Quintero.pdf`: CV descargable.
 
-Puedes subir todos los archivos a Netlify, Vercel, GitHub Pages, cPanel o cualquier hosting estático.
+## Cómo usarlo
 
-## Ajustes recomendados antes de publicar
+Abrir `index.html` en el navegador.
 
-1. Agregar enlace real de LinkedIn si existe.
-2. Reemplazar el CV dentro de `assets/` si se actualiza.
-3. Configurar dominio propio, por ejemplo: `alejandroquintero.tech`.
-4. No agregar capturas con datos internos, clientes, rutas NAS, correos reales de campañas o información sensible.
+Para publicar, subir todos los archivos a Netlify, Vercel, GitHub Pages o cualquier hosting estático.
+
+## Pendientes sugeridos
+
+- Agregar enlace real de LinkedIn.
+- Definir dominio: `alejandroquintero.tech`, `aq1.tech` o similar.
+- Crear versión inglesa si el objetivo incluye mercado internacional.
+- Añadir artículos reales en la sección de laboratorio.
+
+
+## Versión 1.1
+
+Ajuste visual: títulos y subtítulos más contenidos, mejor balance del hero y lectura más profesional sin perder identidad AQ/1.
