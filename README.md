@@ -1,35 +1,38 @@
 # AQ/1 - Alejandro Quintero
 
-Versión 3.1 de la marca profesional AQ/1.
+Sitio profesional de Alejandro Quintero Andrade.
+
+## Version actual
+
+**AQ/1 v4 - Layout limpio tipo portfolio ejecutivo**
+
+Esta version reduce el peso visual del hero, baja el tamano de los titulos, elimina saturacion de texto y organiza el perfil en secciones faciles de revisar:
+
+- Perfil
+- Enfoque
+- Resultados
+- Experiencia
+- Formacion
+- Contacto
+
+## Version anterior preservada
+
+La version anterior quedo guardada en la rama:
+
+**v3-direccion-tecnologica-estable**
+
+Si en algun momento se quiere volver a esa version, usar ese nombre exacto.
 
 ## Idea central
 
 **Las mejores soluciones son las que las personas disfrutan usar.**
 
-AQ/1 presenta a Alejandro Quintero como un profesional capaz de conectar tres dimensiones:
+AQ/1 presenta a Alejandro Quintero como un profesional capaz de conectar tecnologia, operacion, liderazgo de equipos y resultados medibles.
 
-- Sistemas que funcionan.
-- Equipos que crecen.
-- Ejecución real en campo.
+## Publicacion
 
-## Cambios v3.2
+El sitio se publica con GitHub Pages desde la rama `main`.
 
-- Nuevo mensaje principal del hero.
-- Slogan visible sin saturar el inicio.
-- Franja superior con tres dimensiones: resolver, formar y ejecutar.
-- Caso principal más claro en formato reto / intervención / resultado.
-- Sección de equipos fortalecida con valores concretos.
-- Certificado de diversidad, inclusión y pertenencia agregado como respaldo en assets/certificados.
+URL:
 
-## Publicación sugerida
-
-1. Subir a GitHub.
-2. Probar con GitHub Pages.
-3. Revisar versión móvil.
-4. Ajustar textos finales antes de dominio propio.
-
-
-## Cambios v3.2
-- Hero con titular más contenido.
-- Cambio de “Hago” a “Hacer”.
-- Slogan movido debajo del título y con mayor contraste.
+https://alejandr0qa.github.io/aq1-brand-site/
