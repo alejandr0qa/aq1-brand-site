@@ -13,19 +13,83 @@
     content="Continuidad, infraestructura, proyectos y equipos para que la tecnologia soporte mejor la operacion." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#10151f" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20260722-hero-fix" />
+  <link rel="stylesheet" href="fixes.css?v=20260722-hero-fix" />
   <style>
-    .visual-core>strong {
-      white-space: nowrap !important;
+    body::after {
+      display: none !important;
+    }
+
+    .hero {
+      position: relative !important;
+      isolation: isolate !important;
+      min-height: auto !important;
+      padding-top: 118px !important;
+      padding-bottom: 110px !important;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -150px;
+      bottom: 0;
+      left: 50%;
+      width: 100vw;
+      transform: translateX(-50%);
+      background:
+        radial-gradient(circle at 12% 20%, rgba(242, 163, 58, 0.16), transparent 30rem),
+        radial-gradient(circle at 90% 35%, rgba(139, 211, 221, 0.16), transparent 28rem),
+        linear-gradient(135deg, #10151f, #172235 58%, #263248);
+    }
+
+    .hero .lead {
+      color: #eef4ff !important;
+      font-weight: 500;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.26);
     }
 
     .hero-actions {
+      position: relative;
+      z-index: 2;
       margin-top: 32px !important;
+    }
+
+    .hero .btn.secondary {
+      background: rgba(255, 255, 255, 0.14) !important;
+      color: #fffaf1 !important;
+      border-color: rgba(255, 255, 255, 0.28) !important;
+    }
+
+    .proof-strip {
+      margin-top: 24px !important;
+    }
+
+    .visual-core>strong {
+      white-space: nowrap !important;
     }
 
     @media (min-width: 960px) {
       .identity-grid {
         grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 980px) {
+      .hero {
+        padding-top: 96px !important;
+        padding-bottom: 78px !important;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .hero {
+        padding-top: 82px !important;
+        padding-bottom: 64px !important;
+      }
+
+      .hero::before {
+        top: -120px;
       }
     }
   </style>
