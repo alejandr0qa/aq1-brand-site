@@ -110,12 +110,14 @@ li {
   font-size: 0.98rem;
 }
 
-.formation-groups {
+.formation-summary {
   display: grid;
-  grid-template-columns: 0.9fr 1fr 1.3fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
+  margin-bottom: 36px;
 }
 
+.formation-summary article,
 .formation-groups article {
   padding: 26px;
   border-radius: var(--radius);
@@ -124,22 +126,92 @@ li {
   box-shadow: 0 14px 36px rgba(17,24,39,0.07);
 }
 
+.formation-summary h3,
 .formation-groups h3 {
   margin-bottom: 14px;
 }
 
+.formation-summary ul,
 .formation-groups ul {
   margin: 0;
   padding-left: 20px;
   color: var(--muted);
 }
 
+.formation-summary li + li,
 .formation-groups li + li {
   margin-top: 8px;
 }
 
-.formation-groups p {
-  line-height: 1.8;
+.platform-heading {
+  max-width: 720px;
+  margin-bottom: 22px;
+}
+
+.platform-heading p {
+  margin-top: 8px;
+}
+
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.platform-card {
+  position: relative;
+  min-height: 230px;
+  padding: 26px 26px 30px;
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 36px rgba(17,24,39,0.07);
+  overflow: hidden;
+}
+
+.platform-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
+
+.platform-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 20px;
+  border-radius: 14px;
+  background: rgba(242,163,58,0.14);
+  color: #80520d;
+}
+
+.platform-icon svg {
+  width: 27px;
+  height: 27px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.platform-card h3 {
+  margin-bottom: 10px;
+}
+
+.platform-card p {
+  font-size: 0.96rem;
+}
+
+.formation-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
 }
 
 .career-page .site-header {
@@ -230,8 +302,8 @@ li {
   }
 
   .capability-grid,
-  .formation-groups {
-    grid-template-columns: repeat(2, 1fr);
+  .platform-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -254,8 +326,14 @@ li {
   }
 
   .capability-grid,
-  .formation-groups {
+  .formation-summary,
+  .formation-groups,
+  .platform-grid {
     grid-template-columns: 1fr;
+  }
+
+  .platform-card {
+    min-height: auto;
   }
 
   .career-item {
