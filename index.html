@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AQ/1 - Alejandro Quintero | Jefe de Tecnologia</title>
-  <meta name="description" content="Perfil ejecutivo de Alejandro Quintero para direccion tecnologica: continuidad operativa, infraestructura, proyectos, costos, proveedores e indicadores." />
+  <title>AQ/1 - Alejandro Quintero | Perfil profesional</title>
+  <meta name="description" content="Perfil profesional general de Alejandro Quintero: tecnología, infraestructura, proyectos, automatización, seguridad, soporte y liderazgo de equipos." />
   <meta name="author" content="Alejandro Quintero Andrade" />
-  <meta property="og:title" content="AQ/1 - Alejandro Quintero | Direccion tecnologica" />
-  <meta property="og:description" content="Continuidad, infraestructura, proyectos y equipos para que la tecnologia soporte mejor la operacion." />
+  <meta property="og:title" content="AQ/1 - Alejandro Quintero" />
+  <meta property="og:description" content="Tecnología, proyectos, operación y equipos que funcionan mejor." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#10151f" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg?v=20260722-aq1" />
@@ -15,59 +15,9 @@
   <link rel="apple-touch-icon" href="favicon.svg?v=20260722-aq1" />
   <link rel="stylesheet" href="styles.css?v=20260722-hero-fix" />
   <link rel="stylesheet" href="fixes.css?v=20260722-hero-fix" />
-  <style>
-    body::after { display: none !important; }
-    .hero {
-      position: relative !important;
-      isolation: isolate !important;
-      min-height: auto !important;
-      padding-top: 118px !important;
-      padding-bottom: 110px !important;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      top: -150px;
-      bottom: 0;
-      left: 50%;
-      width: 100vw;
-      transform: translateX(-50%);
-      background:
-        radial-gradient(circle at 12% 20%, rgba(242, 163, 58, 0.16), transparent 30rem),
-        radial-gradient(circle at 90% 35%, rgba(139, 211, 221, 0.16), transparent 28rem),
-        linear-gradient(135deg, #10151f, #172235 58%, #263248);
-    }
-    .hero .lead {
-      color: #eef4ff !important;
-      font-weight: 500;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.26);
-    }
-    .hero-actions {
-      position: relative;
-      z-index: 2;
-      margin-top: 32px !important;
-    }
-    .hero .btn.secondary {
-      background: rgba(255, 255, 255, 0.14) !important;
-      color: #fffaf1 !important;
-      border-color: rgba(255, 255, 255, 0.28) !important;
-    }
-    .proof-strip { margin-top: 24px !important; }
-    .visual-core>strong { white-space: nowrap !important; }
-    @media (min-width: 960px) {
-      .identity-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-    @media (max-width: 980px) {
-      .hero { padding-top: 96px !important; padding-bottom: 78px !important; }
-    }
-    @media (max-width: 680px) {
-      .hero { padding-top: 82px !important; padding-bottom: 64px !important; }
-      .hero::before { top: -120px; }
-    }
-  </style>
+  <link rel="stylesheet" href="profile-general.css?v=1" />
 </head>
-<body>
+<body data-title-es="AQ/1 - Alejandro Quintero | Perfil profesional" data-title-en="AQ/1 - Alejandro Quintero | Professional profile">
   <div class="progress" id="progress"></div>
 
   <header class="site-header" id="top">
@@ -75,198 +25,129 @@
       <span class="brand-mark">AQ/1</span>
       <span class="brand-name">Alejandro Quintero</span>
     </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">Menu</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" data-es="Menu" data-en="Menu">Menu</button>
     <nav class="nav" id="nav" aria-label="Navegacion principal">
-      <a href="#perfil">Perfil</a>
-      <a href="#prioridades">Prioridades</a>
-      <a href="#indicadores">Indicadores</a>
-      <a href="#experiencia">Experiencia</a>
-      <a href="#formacion">Formacion</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#perfil" data-es="Perfil" data-en="Profile">Perfil</a>
+      <a href="#capacidades" data-es="Capacidades" data-en="Capabilities">Capacidades</a>
+      <a href="#resultados" data-es="Resultados" data-en="Results">Resultados</a>
+      <a href="trayectoria.html" data-es="Trayectoria" data-en="Career">Trayectoria</a>
+      <a href="#formacion" data-es="Formacion" data-en="Education">Formacion</a>
+      <a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
     </nav>
+    <div class="language-switch" aria-label="Cambiar idioma / Change language">
+      <button type="button" data-lang="es">ES</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
   </header>
 
   <main>
     <section class="hero" aria-labelledby="heroTitle">
       <div class="hero-copy reveal">
-        <p class="eyebrow">Perfil para direccion tecnologica</p>
-        <h1 id="heroTitle">Continuidad, eficiencia y evolucion para servicios e infraestructura tecnologica.</h1>
-        <p class="hero-slogan">Las mejores soluciones son las que las personas disfrutan usar.</p>
-        <p class="lead">Combino liderazgo de servicios TI, infraestructura, proyectos, proveedores, costos e indicadores para que la tecnologia responda al negocio sin perder cercania con los usuarios.</p>
+        <p class="eyebrow" data-es="Perfil profesional" data-en="Professional profile">Perfil profesional</p>
+        <h1 id="heroTitle">Alejandro Quintero</h1>
+        <p class="hero-role" data-es="Tecnologia, proyectos, operacion y equipos que funcionan mejor." data-en="Technology, projects, operations, and teams that work better.">Tecnologia, proyectos, operacion y equipos que funcionan mejor.</p>
+        <p class="hero-slogan" data-es="Las mejores soluciones son las que las personas disfrutan usar." data-en="The best solutions are the ones people enjoy using.">Las mejores soluciones son las que las personas disfrutan usar.</p>
+        <p class="lead" data-es="Combino experiencia tecnica, gestion, automatizacion y liderazgo para convertir necesidades reales en soluciones claras, utiles y sostenibles." data-en="I combine technical experience, management, automation, and leadership to turn real needs into clear, useful, and sustainable solutions.">Combino experiencia tecnica, gestion, automatizacion y liderazgo para convertir necesidades reales en soluciones claras, utiles y sostenibles.</p>
         <div class="hero-actions">
-          <a class="btn primary" href="#prioridades">Ver alineacion</a>
-          <a class="btn secondary" href="assets/CV_Alejandro_Quintero_Andrade.pdf" download>Descargar CV</a>
+          <a class="btn primary" href="#capacidades" data-es="Ver capacidades" data-en="View capabilities">Ver capacidades</a>
+          <a class="btn secondary" href="trayectoria.html" data-es="Ver trayectoria" data-en="View career">Ver trayectoria</a>
         </div>
       </div>
 
-      <aside class="hero-visual reveal" aria-label="Resumen ejecutivo AQ/1">
+      <aside class="hero-visual reveal" aria-label="Resumen AQ/1">
         <div class="visual-core">
           <span class="core-label">AQ/1</span>
-          <strong>Operacion</strong>
-          <small>continuidad · equipos</small>
+          <strong data-es="Resolver" data-en="Solve">Resolver</strong>
+          <small data-es="personas · tecnologia" data-en="people · technology">personas · tecnologia</small>
         </div>
-        <div class="orbit orbit-a"><span>Planear</span></div>
-        <div class="orbit orbit-b"><span>Administrar</span></div>
-        <div class="orbit orbit-c"><span>Controlar</span></div>
-        <div class="orbit orbit-d"><span>Mejorar</span></div>
+        <div class="orbit orbit-a"><span data-es="Entender" data-en="Understand">Entender</span></div>
+        <div class="orbit orbit-b"><span data-es="Construir" data-en="Build">Construir</span></div>
+        <div class="orbit orbit-c"><span data-es="Acompanar" data-en="Support">Acompanar</span></div>
+        <div class="orbit orbit-d"><span data-es="Mejorar" data-en="Improve">Mejorar</span></div>
       </aside>
     </section>
 
-    <section class="proof-strip reveal" aria-label="Tres focos del perfil">
-      <article>
-        <span>01</span>
-        <strong>Continuidad</strong>
-        <p>Servicios estables, seguros y disponibles.</p>
-      </article>
-      <article>
-        <span>02</span>
-        <strong>Gestion</strong>
-        <p>Costos, proveedores, riesgos e indicadores claros.</p>
-      </article>
-      <article>
-        <span>03</span>
-        <strong>Evolucion</strong>
-        <p>Proyectos que mejoran la eficiencia operativa.</p>
-      </article>
+    <section class="proof-strip reveal" aria-label="Tres dimensiones del perfil">
+      <article><span>01</span><strong data-es="Tecnologia" data-en="Technology">Tecnologia</strong><p data-es="Infraestructura, servicios, seguridad y automatizacion." data-en="Infrastructure, services, security, and automation.">Infraestructura, servicios, seguridad y automatizacion.</p></article>
+      <article><span>02</span><strong data-es="Gestion" data-en="Management">Gestion</strong><p data-es="Proyectos, proveedores, costos, indicadores y mejora." data-en="Projects, vendors, costs, indicators, and improvement.">Proyectos, proveedores, costos, indicadores y mejora.</p></article>
+      <article><span>03</span><strong data-es="Personas" data-en="People">Personas</strong><p data-es="Equipos con criterio, autonomia y orientacion al usuario." data-en="Teams with judgment, autonomy, and user focus.">Equipos con criterio, autonomia y orientacion al usuario.</p></article>
     </section>
 
     <section class="identity section" id="perfil" aria-labelledby="profileTitle">
       <div class="section-intro reveal">
-        <p class="eyebrow">Perfil ejecutivo</p>
-        <h2 id="profileTitle">Un responsable de tecnologia debe sostener la operacion y preparar el siguiente paso.</h2>
-        <p>Ingeniero de Sistemas y Especialista en Gerencia de Proyectos, con experiencia acumulada desde 2013 en coordinacion de servicios tecnologicos, liderazgo de infraestructura, continuidad operativa, seguridad, redes, servicios cloud, sistemas empresariales, proveedores y automatizacion de procesos.</p>
-      </div>
-      <div class="identity-grid">
-        <article class="identity-card warm reveal">
-          <span class="card-number">01</span>
-          <h3>Direccion operativa</h3>
-          <p>Asegurar que la infraestructura, el soporte y los servicios tecnologicos funcionen con estabilidad y prioridad de negocio.</p>
-        </article>
-        <article class="identity-card reveal">
-          <span class="card-number">02</span>
-          <h3>Control y decision</h3>
-          <p>Convertir costos, incidentes, proveedores, riesgos y proyectos en informacion clara para tomar decisiones.</p>
-        </article>
-        <article class="identity-card reveal">
-          <span class="card-number">03</span>
-          <h3>Liderazgo de equipos</h3>
-          <p>Formar equipos con criterio, autonomia, documentacion, atencion al detalle y orientacion real al usuario.</p>
-        </article>
+        <p class="eyebrow" data-es="Perfil" data-en="Profile">Perfil</p>
+        <h2 id="profileTitle" data-es="Experiencia tecnica, gestion y cercania con la operacion." data-en="Technical experience, management, and closeness to operations.">Experiencia tecnica, gestion y cercania con la operacion.</h2>
+        <p data-es="Ingeniero de Sistemas y Especialista en Gerencia de Proyectos, con experiencia desde 2013 en coordinacion de servicios tecnologicos, infraestructura, continuidad, seguridad, redes, nube, sistemas empresariales, proveedores y automatizacion de procesos." data-en="Systems Engineer and Project Management Specialist, with experience since 2013 in technology services coordination, infrastructure, continuity, security, networks, cloud, enterprise systems, vendors, and process automation.">Ingeniero de Sistemas y Especialista en Gerencia de Proyectos, con experiencia desde 2013 en coordinacion de servicios tecnologicos, infraestructura, continuidad, seguridad, redes, nube, sistemas empresariales, proveedores y automatizacion de procesos.</p>
       </div>
     </section>
 
-    <section class="cases section" id="prioridades" aria-labelledby="prioritiesTitle">
+    <section class="cases section" id="capacidades" aria-labelledby="capabilitiesTitle">
       <div class="section-intro reveal">
-        <p class="eyebrow">Lo que busca el cargo</p>
-        <h2 id="prioritiesTitle">Alineacion directa con responsabilidades de jefatura tecnologica.</h2>
+        <p class="eyebrow" data-es="Capacidades" data-en="Capabilities">Capacidades</p>
+        <h2 id="capabilitiesTitle" data-es="Seis areas que resumen como aporto." data-en="Six areas that summarize how I contribute.">Seis areas que resumen como aporto.</h2>
       </div>
-
-      <article class="case-feature reveal">
-        <div class="case-badge">Enfoque central</div>
-        <div>
-          <h3>Gobernar la tecnologia como servicio para la operacion.</h3>
-          <p>El objetivo no es solo administrar plataformas. Es asegurar que infraestructura, sistemas, comunicaciones, seguridad, proveedores y proyectos avancen con orden, continuidad y beneficio medible para la empresa.</p>
-          <div class="case-mini-grid">
-            <div><span>Operacion</span><p>Disponibilidad, soporte, incidentes, respaldo y seguridad.</p></div>
-            <div><span>Gestion</span><p>Presupuesto, contratos, proveedores, indicadores y riesgos.</p></div>
-            <div><span>Evolucion</span><p>Hoja de ruta, proyectos, sistemas empresariales y mejora continua.</p></div>
-          </div>
-        </div>
-        <div class="case-result">
-          <strong>TI</strong>
-          <span>con sentido de negocio</span>
-        </div>
-      </article>
-
-      <div class="case-grid">
-        <article class="case-card reveal"><span>01</span><h3>Infraestructura</h3><p>Servidores, redes, conectividad, almacenamiento, respaldo, comunicaciones y equipos.</p></article>
-        <article class="case-card reveal"><span>02</span><h3>Sistemas</h3><p>Administracion y mejora de plataformas empresariales, ERP, aplicaciones, nube y servicios web.</p></article>
-        <article class="case-card reveal"><span>03</span><h3>Proyectos</h3><p>Control de alcance, tiempos, costos, riesgos, calidad, adopcion y beneficios esperados.</p></article>
-        <article class="case-card reveal"><span>04</span><h3>Direccion</h3><p>Informes ejecutivos, prioridades, hoja de ruta tecnologica y comunicacion con gerencia.</p></article>
+      <div class="capability-grid">
+        <article class="capability-card reveal"><span>01</span><h3 data-es="Infraestructura y servicios TI" data-en="Infrastructure and IT services">Infraestructura y servicios TI</h3><p data-es="Administracion y evolucion de redes, servidores, conectividad, almacenamiento, respaldo y servicios de usuario." data-en="Management and evolution of networks, servers, connectivity, storage, backup, and user services.">Administracion y evolucion de redes, servidores, conectividad, almacenamiento, respaldo y servicios de usuario.</p></article>
+        <article class="capability-card reveal"><span>02</span><h3 data-es="Continuidad y seguridad" data-en="Continuity and security">Continuidad y seguridad</h3><p data-es="Disponibilidad, proteccion, recuperacion, gestion de incidentes y reduccion de riesgos operativos." data-en="Availability, protection, recovery, incident management, and operational risk reduction.">Disponibilidad, proteccion, recuperacion, gestion de incidentes y reduccion de riesgos operativos.</p></article>
+        <article class="capability-card reveal"><span>03</span><h3 data-es="Automatizacion y procesos" data-en="Automation and processes">Automatizacion y procesos</h3><p data-es="Flujos mas simples, trazables y menos dependientes de tareas manuales repetitivas." data-en="Simpler, traceable workflows with less dependence on repetitive manual tasks.">Flujos mas simples, trazables y menos dependientes de tareas manuales repetitivas.</p></article>
+        <article class="capability-card reveal"><span>04</span><h3 data-es="Proyectos y proveedores" data-en="Projects and vendors">Proyectos y proveedores</h3><p data-es="Alcance, tiempos, costos, contratos, seguimiento, riesgos y beneficios esperados." data-en="Scope, timelines, costs, contracts, follow-up, risks, and expected benefits.">Alcance, tiempos, costos, contratos, seguimiento, riesgos y beneficios esperados.</p></article>
+        <article class="capability-card reveal"><span>05</span><h3 data-es="Soporte y experiencia del usuario" data-en="Support and user experience">Soporte y experiencia del usuario</h3><p data-es="Atencion clara, resolucion practica y servicios que las personas pueden utilizar con confianza." data-en="Clear assistance, practical resolution, and services people can use with confidence.">Atencion clara, resolucion practica y servicios que las personas pueden utilizar con confianza.</p></article>
+        <article class="capability-card reveal"><span>06</span><h3 data-es="Liderazgo y desarrollo de equipos" data-en="Leadership and team development">Liderazgo y desarrollo de equipos</h3><p data-es="Criterio, autonomia, documentacion, atencion al detalle y mentalidad de mejora continua." data-en="Judgment, autonomy, documentation, attention to detail, and a continuous-improvement mindset.">Criterio, autonomia, documentacion, atencion al detalle y mentalidad de mejora continua.</p></article>
       </div>
     </section>
 
-    <section class="impact section" id="indicadores" aria-labelledby="impactTitle">
+    <section class="impact section" id="resultados" aria-labelledby="resultsTitle">
       <div class="impact-layout">
         <div class="section-intro reveal">
-          <p class="eyebrow">Indicadores destacados</p>
-          <h2 id="impactTitle">Resultados presentados una sola vez, para evitar ruido.</h2>
-          <p>Estas cifras resumen capacidad de gestion, optimizacion y soporte a operaciones distribuidas. En el resto del perfil se prioriza contexto y responsabilidad, no repeticion de numeros.</p>
+          <p class="eyebrow" data-es="Resultados" data-en="Results">Resultados</p>
+          <h2 id="resultsTitle" data-es="Indicadores concretos, presentados una sola vez." data-en="Concrete indicators, shown only once.">Indicadores concretos, presentados una sola vez.</h2>
+          <p data-es="Cifras que resumen experiencia en coordinacion, soporte distribuido y optimizacion de servicios." data-en="Figures that summarize experience in coordination, distributed support, and service optimization.">Cifras que resumen experiencia en coordinacion, soporte distribuido y optimizacion de servicios.</p>
         </div>
         <div class="metrics reveal">
-          <article class="metric"><strong data-count="2013">2013</strong><span>+</span><p>trayectoria desde cargos de coordinacion</p></article>
-          <article class="metric"><strong data-count="240">240</strong><span>+</span><p>puntos de venta / sedes soportadas</p></article>
-          <article class="metric"><strong data-count="40">40</strong><span>%+</span><p>reduccion en telecomunicaciones</p></article>
-          <article class="metric"><strong data-count="30">30</strong><span>%+</span><p>optimizacion de costos cloud</p></article>
+          <article class="metric"><strong data-count="2013">2013</strong><span>+</span><p data-es="trayectoria desde cargos de coordinacion" data-en="track record since coordination roles">trayectoria desde cargos de coordinacion</p></article>
+          <article class="metric"><strong data-count="240">240</strong><span>+</span><p data-es="puntos de venta / sedes soportadas" data-en="points of sale / supported sites">puntos de venta / sedes soportadas</p></article>
+          <article class="metric"><strong data-count="40">40</strong><span>%+</span><p data-es="reduccion en telecomunicaciones" data-en="telecommunications cost reduction">reduccion en telecomunicaciones</p></article>
+          <article class="metric"><strong data-count="30">30</strong><span>%+</span><p data-es="optimizacion de costos cloud" data-en="cloud cost optimization">optimizacion de costos cloud</p></article>
         </div>
       </div>
     </section>
 
-    <section class="teams section" id="experiencia" aria-labelledby="experienceTitle">
+    <section class="teams section" id="trayectoria" aria-labelledby="careerTitle">
       <div class="quote-card reveal">
-        <p class="eyebrow">Experiencia alineada</p>
-        <h2 id="experienceTitle">Estrategia cuando se necesita; manos a la obra cuando la operacion lo exige.</h2>
-        <p>Lidero infraestructura y servicios TI, gestiono incidentes criticos, coordino proveedores, acompano equipos, documento procesos y promuevo automatizaciones que reducen trabajo manual. Antes de mi rol actual, coordine servicios TI y soporte distribuido, fortaleciendo continuidad, seguimiento y comunicacion con usuarios.</p>
-        <div class="team-values" aria-label="Areas de experiencia">
-          <span>Continuidad operativa</span>
-          <span>Infraestructura TI</span>
-          <span>Costos y proveedores</span>
-          <span>Sistemas ERP</span>
-          <span>Seguridad y redes</span>
-          <span>Proyectos tecnologicos</span>
-          <span>Indicadores</span>
-          <span>Equipos de soporte</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="method section" aria-labelledby="methodTitle">
-      <div class="section-intro reveal">
-        <p class="eyebrow">Forma de trabajo</p>
-        <h2 id="methodTitle">Orden ejecutivo, criterio tecnico y orientacion al usuario.</h2>
-      </div>
-      <div class="method-flow reveal">
-        <div><span>01</span><strong>Priorizar</strong></div>
-        <div><span>02</span><strong>Estabilizar</strong></div>
-        <div><span>03</span><strong>Controlar</strong></div>
-        <div><span>04</span><strong>Ejecutar</strong></div>
-        <div><span>05</span><strong>Medir</strong></div>
-        <div><span>06</span><strong>Mejorar</strong></div>
+        <p class="eyebrow" data-es="Trayectoria" data-en="Career">Trayectoria</p>
+        <h2 id="careerTitle" data-es="Una carrera construida entre estrategia, operacion y servicio." data-en="A career built across strategy, operations, and service.">Una carrera construida entre estrategia, operacion y servicio.</h2>
+        <p data-es="He coordinado servicios tecnologicos, liderado infraestructura y soporte, gestionado incidentes, proveedores y proyectos, y desarrollado automatizaciones para resolver necesidades reales." data-en="I have coordinated technology services, led infrastructure and support, managed incidents, vendors, and projects, and developed automations to solve real needs.">He coordinado servicios tecnologicos, liderado infraestructura y soporte, gestionado incidentes, proveedores y proyectos, y desarrollado automatizaciones para resolver necesidades reales.</p>
+        <div class="hero-actions"><a class="btn primary" href="trayectoria.html" data-es="Ver trayectoria completa" data-en="View full career">Ver trayectoria completa</a></div>
       </div>
     </section>
 
     <section class="lab section" id="formacion" aria-labelledby="formationTitle">
-      <div class="lab-layout">
-        <div class="section-intro reveal">
-          <p class="eyebrow">Formacion y herramientas</p>
-          <h2 id="formationTitle">Base academica, gestion de proyectos y tecnologia aplicada.</h2>
-          <p>El foco para esta postulacion esta en formacion y herramientas relevantes para direccion tecnologica, infraestructura, proyectos, continuidad y seguridad.</p>
-        </div>
-        <div class="tool-board reveal" aria-label="Formacion y herramientas relevantes">
-          <span>Ingenieria de Sistemas</span><span>Gerencia de Proyectos</span><span>Google Project Management</span><span>Google Cybersecurity</span><span>AWS Cloud Foundations</span><span>Fortinet NSE 3</span><span>Microsoft 365</span><span>Windows Server</span><span>VMware</span><span>AWS</span><span>Fortinet</span><span>Sophos</span><span>SD-WAN</span><span>VPN</span><span>LAN/WAN</span><span>NAS</span><span>ERP</span><span>n8n</span>
-        </div>
+      <div class="section-intro reveal">
+        <p class="eyebrow" data-es="Formacion y herramientas" data-en="Education and tools">Formacion y herramientas</p>
+        <h2 id="formationTitle" data-es="Informacion agrupada para leerla con facilidad." data-en="Information grouped for easy reading.">Informacion agrupada para leerla con facilidad.</h2>
+      </div>
+      <div class="formation-groups reveal">
+        <article><h3 data-es="Formacion" data-en="Education">Formacion</h3><ul><li data-es="Ingenieria de Sistemas" data-en="Systems Engineering">Ingenieria de Sistemas</li><li data-es="Especializacion en Gerencia de Proyectos" data-en="Specialization in Project Management">Especializacion en Gerencia de Proyectos</li></ul></article>
+        <article><h3 data-es="Certificaciones" data-en="Certifications">Certificaciones</h3><ul><li>Google Project Management</li><li>Google Cybersecurity</li><li>AWS Cloud Foundations</li><li>Fortinet NSE 3</li></ul></article>
+        <article><h3 data-es="Tecnologias y plataformas" data-en="Technologies and platforms">Tecnologias y plataformas</h3><p>Microsoft 365 · Windows Server · VMware · AWS · Fortinet · Sophos · SD-WAN · VPN · LAN/WAN · NAS · ERP · n8n</p></article>
       </div>
     </section>
 
     <section class="contact section" id="contacto" aria-labelledby="contactTitle">
       <div class="contact-card reveal">
-        <p class="eyebrow">Contacto</p>
-        <h2 id="contactTitle">Perfil disponible para conversar sobre direccion tecnologica.</h2>
-        <p>Me interesa aportar en cargos donde tecnologia, operacion y negocio deban trabajar mejor juntos: continuidad, infraestructura, costos, proyectos, indicadores y equipos preparados.</p>
+        <p class="eyebrow" data-es="Contacto" data-en="Contact">Contacto</p>
+        <h2 id="contactTitle" data-es="Conversemos sobre tecnologia, proyectos, automatizacion, operacion y equipos." data-en="Let us talk about technology, projects, automation, operations, and teams.">Conversemos sobre tecnologia, proyectos, automatizacion, operacion y equipos.</h2>
+        <p data-es="Si necesitas un perfil enfocado en una posicion o necesidad especifica, contactame." data-en="If you need a profile focused on a specific role or business need, contact me.">Si necesitas un perfil enfocado en una posicion o necesidad especifica, contactame.</p>
         <div class="contact-actions">
           <a class="btn primary" href="mailto:alejandro.qa@gmail.com">alejandro.qa@gmail.com</a>
           <a class="btn secondary" href="tel:+573213965869">+57 321 396 5869</a>
-          <a class="btn secondary" href="assets/CV_Alejandro_Quintero_Andrade.pdf" download>CV PDF</a>
+          <a class="btn secondary" href="trayectoria.html" data-es="Ver trayectoria" data-en="View career">Ver trayectoria</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <span>AQ/1 - Alejandro Quintero</span>
-    <span>Continuidad · eficiencia · evolucion tecnologica</span>
-  </footer>
-
-  <script src="script.js"></script>
+  <footer class="footer"><span>AQ/1 - Alejandro Quintero</span><span data-es="Tecnologia · proyectos · operacion · personas" data-en="Technology · projects · operations · people">Tecnologia · proyectos · operacion · personas</span></footer>
+  <script src="script.js?v=profile-general-1"></script>
 </body>
 </html>
