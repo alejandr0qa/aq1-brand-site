@@ -22,33 +22,84 @@ nav?.querySelectorAll('a').forEach(link => {
   });
 });
 
-const revealObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
-    }
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+} else {
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+}
+
+function animateCounter(el) {
+  if (el.dataset.animated === 'true') return;
+  const target = Number(el.dataset.count || el.textContent || 0);
+  if (!Number.isFinite(target)) return;
+  el.dataset.animated = 'true';
+  el.textContent = '0';
+  const duration = 900;
+  const start = performance.now();
+
+  function tick(now) {
+    const pct = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - pct, 3);
+    el.textContent = Math.round(target * eased).toString();
+    if (pct < 1) requestAnimationFrame(tick);
+    else el.textContent = String(target);
+  }
+
+  requestAnimationFrame(tick);
+}
+
+const counters = document.querySelectorAll('[data-count]');
+if ('IntersectionObserver' in window) {
+  const counterObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      animateCounter(entry.target);
+      counterObserver.unobserve(entry.target);
+    });
+  }, { threshold: 0.2 });
+
+  counters.forEach(el => counterObserver.observe(el));
+  window.setTimeout(() => {
+    counters.forEach(el => {
+      if (el.dataset.animated !== 'true') el.textContent = el.dataset.count;
+    });
+  }, 1400);
+} else {
+  counters.forEach(el => {
+    el.textContent = el.dataset.count;
   });
-}, { threshold: 0.12 });
+}
 
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+function applyLanguage(lang) {
+  const selected = lang === 'en' ? 'en' : 'es';
+  document.documentElement.lang = selected;
 
-const counterObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    const el = entry.target;
-    const target = Number(el.dataset.count || 0);
-    const duration = 1100;
-    const start = performance.now();
-    function tick(now) {
-      const pct = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - pct, 3);
-      el.textContent = Math.round(target * eased).toString();
-      if (pct < 1) requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
-    counterObserver.unobserve(el);
+  document.querySelectorAll('[data-es][data-en]').forEach(el => {
+    el.textContent = el.dataset[selected];
   });
-}, { threshold: 0.55 });
 
-document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+  const body = document.body;
+  const pageTitle = selected === 'en' ? body.dataset.titleEn : body.dataset.titleEs;
+  if (pageTitle) document.title = pageTitle;
+
+  document.querySelectorAll('.language-switch button').forEach(button => {
+    button.classList.toggle('active', button.dataset.lang === selected);
+  });
+
+  localStorage.setItem('aq1-language', selected);
+}
+
+document.querySelectorAll('.language-switch button').forEach(button => {
+  button.addEventListener('click', () => applyLanguage(button.dataset.lang));
+});
+
+applyLanguage(localStorage.getItem('aq1-language') || 'es');
