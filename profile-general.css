@@ -1,0 +1,265 @@
+/* AQ/1 perfil profesional general: ajustes de lectura sin cambiar la identidad visual */
+
+h1 {
+  font-size: clamp(3rem, 5vw, 3.5rem);
+  line-height: 1.04;
+}
+
+h2 {
+  font-size: clamp(1.9rem, 3.2vw, 2.35rem);
+  line-height: 1.12;
+}
+
+h3 {
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  line-height: 1.2;
+}
+
+p,
+li {
+  font-size: clamp(1rem, 1.4vw, 1.08rem);
+}
+
+.hero {
+  min-height: auto !important;
+  padding-top: 104px !important;
+  padding-bottom: 86px !important;
+}
+
+.hero-role {
+  margin-top: 14px;
+  color: var(--text);
+  font-size: clamp(1.22rem, 2vw, 1.55rem);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.hero-slogan {
+  margin-top: 18px;
+}
+
+.hero .lead {
+  margin-top: 18px;
+  font-size: clamp(1.06rem, 1.8vw, 1.25rem);
+}
+
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+}
+
+.language-switch button {
+  border: 0;
+  background: transparent;
+  color: rgba(248,243,234,0.72);
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.language-switch button.active {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.identity .section-intro {
+  max-width: 900px;
+  margin-bottom: 0;
+}
+
+.capability-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.capability-card {
+  padding: 26px;
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 36px rgba(17,24,39,0.08);
+}
+
+.capability-card > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: rgba(17,24,39,0.07);
+  color: #80520d;
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.capability-card h3 {
+  margin-bottom: 9px;
+}
+
+.capability-card p {
+  font-size: 0.98rem;
+}
+
+.formation-groups {
+  display: grid;
+  grid-template-columns: 0.9fr 1fr 1.3fr;
+  gap: 18px;
+}
+
+.formation-groups article {
+  padding: 26px;
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 36px rgba(17,24,39,0.07);
+}
+
+.formation-groups h3 {
+  margin-bottom: 14px;
+}
+
+.formation-groups ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.formation-groups li + li {
+  margin-top: 8px;
+}
+
+.formation-groups p {
+  line-height: 1.8;
+}
+
+.career-page .site-header {
+  margin-bottom: 0;
+}
+
+.career-hero {
+  width: min(var(--max), calc(100% - 32px));
+  margin: 0 auto;
+  padding: 112px 0 70px;
+  color: var(--text);
+  position: relative;
+  isolation: isolate;
+}
+
+.career-hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -140px;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background:
+    radial-gradient(circle at 12% 20%, rgba(242,163,58,0.16), transparent 30rem),
+    radial-gradient(circle at 90% 35%, rgba(139,211,221,0.16), transparent 28rem),
+    linear-gradient(135deg, #10151f, #172235 58%, #263248);
+}
+
+.career-hero p {
+  max-width: 760px;
+  margin-top: 18px;
+  color: #d7deea;
+}
+
+.career-layout {
+  width: min(var(--max), calc(100% - 32px));
+  margin: 0 auto;
+  padding: 70px 0;
+}
+
+.career-section + .career-section {
+  margin-top: 68px;
+}
+
+.career-section > h2 {
+  margin-bottom: 24px;
+}
+
+.career-list {
+  display: grid;
+  gap: 16px;
+}
+
+.career-item {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 26px;
+  padding: 26px;
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+}
+
+.career-date {
+  color: #80520d;
+  font-weight: 900;
+}
+
+.career-item h3 {
+  margin-bottom: 8px;
+}
+
+.career-item ul {
+  margin: 14px 0 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.career-item li + li {
+  margin-top: 7px;
+}
+
+@media (max-width: 980px) {
+  .language-switch {
+    margin-left: auto;
+  }
+
+  .capability-grid,
+  .formation-groups {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  h1 {
+    font-size: clamp(2.45rem, 11vw, 3rem);
+  }
+
+  h2 {
+    font-size: 1.85rem;
+  }
+
+  .hero {
+    padding-top: 82px !important;
+    padding-bottom: 64px !important;
+  }
+
+  .language-switch {
+    order: 2;
+  }
+
+  .capability-grid,
+  .formation-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .career-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
