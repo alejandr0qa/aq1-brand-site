@@ -549,3 +549,34 @@ body::after {
   }
   .proof-strip { width: min(var(--max), calc(100% - 20px)); }
 }
+
+/* Transformation Section Cards */
+.transform-card {
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 36px rgba(17,24,39,0.08);
+}
+
+.transform-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: rgba(17,24,39,0.07);
+  color: #80520d;
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.transform-card p {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.transform-card .impact-metric {
+  color: var(--accent);
+  font-weight: bold;
+  margin-top: 12px;
+}
