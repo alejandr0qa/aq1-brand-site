@@ -49,7 +49,7 @@ function applyLanguage(lang) {
   document.documentElement.lang = selected;
 
   document.querySelectorAll('[data-es][data-en]').forEach(el => {
-    el.textContent = el.dataset[selected];
+    el.innerHTML = el.dataset[selected];
   });
 
   const body = document.body;
