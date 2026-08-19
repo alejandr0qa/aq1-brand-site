@@ -377,3 +377,23 @@ li {
     gap: 8px;
   }
 }
+
+/* Fix #formacion css for items rendering horizontally instead of vertically */
+#formacion .formation-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+  gap: 1.5rem !important;
+}
+#formacion ul, .clean-vertical-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.6rem !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+#formacion li, .clean-vertical-list li {
+  display: block !important;
+  width: 100% !important;
+  white-space: normal !important;
+}
