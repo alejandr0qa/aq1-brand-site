@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AQGrip — Inteligencia de mercado basada en evidencia</title>
+  <meta name="description" content="Presentación ejecutiva de AQGrip: investigación, control de riesgo y validación Paper antes de exponer capital.">
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+  <meta name="theme-color" content="#07111f">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-deep: #040a13;
+      --panel: rgba(15, 30, 50, .76);
+      --panel-solid: #0e1c30;
+      --line: rgba(144, 177, 214, .16);
+      --text: #f5f8fc;
+      --muted: #9db0c7;
+      --blue: #3184ff;
+      --cyan: #39d8d1;
+      --green: #43d17b;
+      --amber: #f0b84b;
+      --red: #ff6b75;
+      --max: 1180px;
+      --radius: 24px;
+      --shadow: 0 24px 70px rgba(0, 0, 0, .28);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 84% 6%, rgba(49, 132, 255, .16), transparent 28rem),
+        radial-gradient(circle at 8% 24%, rgba(57, 216, 209, .08), transparent 26rem),
+        var(--bg);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+    .progress {
+      position: fixed; inset: 0 auto auto 0; z-index: 20;
+      height: 3px; width: 0; background: linear-gradient(90deg, var(--blue), var(--cyan));
+    }
+
+    .site-header {
+      position: sticky; top: 0; z-index: 15;
+      border-bottom: 1px solid var(--line);
+      background: rgba(7, 17, 31, .82);
+      backdrop-filter: blur(18px);
+    }
+    .header-inner {
+      min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    }
+    .brand { display: flex; align-items: baseline; gap: 11px; font-weight: 800; letter-spacing: -.02em; }
+    .brand-mark {
+      display: inline-grid; place-items: center; min-width: 52px; height: 34px; padding: 0 10px;
+      border: 1px solid rgba(49, 132, 255, .55); border-radius: 10px;
+      color: #fff; background: rgba(49, 132, 255, .12);
+    }
+    .brand-name { color: var(--muted); font-size: .95rem; font-weight: 600; }
+    nav { display: flex; gap: 24px; color: var(--muted); font-size: .93rem; }
+    nav a:hover { color: #fff; }
+    .status {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 12px; border: 1px solid rgba(67, 209, 123, .24); border-radius: 999px;
+      color: #baf2cf; background: rgba(67, 209, 123, .08); font-size: .78rem; font-weight: 800;
+      letter-spacing: .08em; text-transform: uppercase;
+    }
+    .status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 16px var(--green); }
+
+    .hero {
+      min-height: calc(100vh - 76px);
+      display: grid; grid-template-columns: 1.15fr .85fr; align-items: center; gap: 64px;
+      padding: 80px 0 72px;
+    }
+    .eyebrow {
+      margin: 0 0 18px; color: var(--cyan); font-size: .8rem; font-weight: 800;
+      letter-spacing: .14em; text-transform: uppercase;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      max-width: 850px; margin-bottom: 24px;
+      font-size: clamp(3.4rem, 7.4vw, 7rem); line-height: .91; letter-spacing: -.065em;
+    }
+    h1 span { color: transparent; background: linear-gradient(100deg, #fff 5%, #72aaff 55%, #4ee1d8); background-clip: text; }
+    .hero-lead { max-width: 730px; color: #c3d0df; font-size: clamp(1.13rem, 2vw, 1.42rem); line-height: 1.62; }
+    .hero-truth {
+      display: flex; gap: 10px; align-items: flex-start; max-width: 670px; margin: 30px 0;
+      padding: 16px 18px; border: 1px solid rgba(240, 184, 75, .22); border-radius: 16px;
+      color: #d8c28d; background: rgba(240, 184, 75, .06); font-size: .92rem;
+    }
+    .hero-truth strong { color: #ffe0a0; white-space: nowrap; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-flex; min-height: 50px; align-items: center; justify-content: center;
+      padding: 0 20px; border-radius: 13px; border: 1px solid var(--line);
+      font-weight: 750; transition: .2s ease;
+    }
+    .btn.primary { background: linear-gradient(120deg, #256ff0, #34a1ff); border-color: transparent; box-shadow: 0 12px 35px rgba(49,132,255,.25); }
+    .btn.secondary { color: #d9e4f1; background: rgba(255,255,255,.035); }
+    .btn:hover { transform: translateY(-2px); }
+
+    .hero-system {
+      position: relative; min-height: 550px; display: grid; place-items: center;
+    }
+    .system-glow {
+      position: absolute; width: 390px; aspect-ratio: 1; border-radius: 50%;
+      background: radial-gradient(circle, rgba(49,132,255,.22), transparent 64%);
+      filter: blur(12px);
+    }
+    .core {
+      position: relative; z-index: 3; display: grid; place-items: center; text-align: center;
+      width: 210px; aspect-ratio: 1; border: 1px solid rgba(91,154,255,.42); border-radius: 50%;
+      background: radial-gradient(circle at 30% 25%, rgba(58,123,231,.36), rgba(9,23,41,.96) 62%);
+      box-shadow: 0 0 0 22px rgba(49,132,255,.035), 0 0 80px rgba(49,132,255,.18);
+    }
+    .core strong { display: block; font-size: 2rem; letter-spacing: -.04em; }
+    .core small { width: 145px; color: var(--muted); line-height: 1.35; }
+    .orbit {
+      position: absolute; z-index: 2; width: 420px; aspect-ratio: 1; border: 1px solid rgba(120,170,225,.16);
+      border-radius: 50%; animation: spin 28s linear infinite;
+    }
+    .orbit.two { width: 540px; animation-duration: 38s; animation-direction: reverse; }
+    .orbit span {
+      position: absolute; display: grid; place-items: center; width: 104px; min-height: 48px;
+      padding: 9px; border-radius: 12px; background: #10233b; border: 1px solid rgba(90,155,230,.25);
+      box-shadow: var(--shadow); color: #dceafa; font-size: .78rem; font-weight: 750; text-align: center;
+      animation: counter 28s linear infinite;
+    }
+    .orbit.two span { animation-duration: 38s; animation-direction: reverse; }
+    .orbit span:nth-child(1) { left: 50%; top: -24px; transform: translateX(-50%); }
+    .orbit span:nth-child(2) { right: -40px; top: 50%; transform: translateY(-50%); }
+    .orbit span:nth-child(3) { left: 50%; bottom: -24px; transform: translateX(-50%); }
+    .orbit span:nth-child(4) { left: -42px; top: 50%; transform: translateY(-50%); }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes counter { to { rotate: -360deg; } }
+
+    section { padding: 96px 0; }
+    .section-head { max-width: 800px; margin-bottom: 48px; }
+    h2 { margin-bottom: 18px; font-size: clamp(2.1rem, 4.8vw, 4.1rem); line-height: 1.04; letter-spacing: -.045em; }
+    .section-head > p:not(.eyebrow) { color: var(--muted); font-size: 1.08rem; }
+
+    .manifesto {
+      border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.015), transparent);
+    }
+    .manifesto-grid { display: grid; grid-template-columns: .75fr 1.25fr; gap: 60px; align-items: start; }
+    .statement {
+      font-size: clamp(1.7rem, 3.2vw, 3rem); line-height: 1.2; letter-spacing: -.035em;
+    }
+    .statement strong { color: var(--cyan); }
+    .anti-list { display: grid; gap: 14px; }
+    .anti {
+      display: grid; grid-template-columns: 42px 1fr; gap: 16px; align-items: start;
+      padding: 18px; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,.02);
+    }
+    .anti b { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; color: var(--red); background: rgba(255,107,117,.1); }
+    .anti h3 { margin: 2px 0 4px; font-size: 1rem; }
+    .anti p { margin: 0; color: var(--muted); font-size: .9rem; }
+
+    .process { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; counter-reset: step; }
+    .step {
+      position: relative; min-height: 250px; padding: 24px 20px;
+      border: 1px solid var(--line); border-radius: 20px;
+      background: linear-gradient(145deg, rgba(20,42,70,.82), rgba(9,20,35,.86));
+      overflow: hidden;
+    }
+    .step::after {
+      counter-increment: step; content: "0" counter(step);
+      position: absolute; right: 14px; bottom: -22px; color: rgba(255,255,255,.035);
+      font-size: 6rem; font-weight: 900; line-height: 1;
+    }
+    .step-icon {
+      display: grid; place-items: center; width: 44px; height: 44px; margin-bottom: 26px;
+      border-radius: 13px; color: var(--cyan); background: rgba(57,216,209,.08);
+      border: 1px solid rgba(57,216,209,.18); font-weight: 900;
+    }
+    .step h3 { font-size: 1.02rem; }
+    .step p { position: relative; z-index: 1; margin: 0; color: var(--muted); font-size: .88rem; }
+
+    .proof { background: var(--bg-deep); border-block: 1px solid var(--line); }
+    .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .metric {
+      min-height: 188px; padding: 24px; border: 1px solid var(--line); border-radius: 20px;
+      background: var(--panel);
+    }
+    .metric strong { display: block; margin-bottom: 10px; font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1; letter-spacing: -.05em; color: #fff; }
+    .metric .unit { color: var(--blue); }
+    .metric p { margin: 0; color: var(--muted); font-size: .9rem; }
+    .proof-note { margin-top: 22px; color: #889bb2; font-size: .84rem; }
+
+    .difference-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .difference-card {
+      padding: 28px; border: 1px solid var(--line); border-radius: 20px; background: rgba(255,255,255,.025);
+    }
+    .difference-card em { color: var(--blue); font-style: normal; font-size: .75rem; font-weight: 850; letter-spacing: .12em; }
+    .difference-card h3 { margin: 14px 0 10px; font-size: 1.22rem; }
+    .difference-card p { margin: 0; color: var(--muted); font-size: .94rem; }
+
+    .stage-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 32px; align-items: stretch; }
+    .stage-panel {
+      padding: 30px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel);
+    }
+    .stage-now {
+      display: inline-flex; padding: 7px 11px; border-radius: 999px; color: #d8c18f;
+      background: rgba(240,184,75,.09); border: 1px solid rgba(240,184,75,.22);
+      font-size: .76rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase;
+    }
+    .stage-panel h3 { margin: 22px 0 10px; font-size: 1.7rem; letter-spacing: -.03em; }
+    .stage-panel p { color: var(--muted); }
+    .gate-list { display: grid; gap: 12px; margin-top: 22px; }
+    .gate {
+      display: flex; justify-content: space-between; gap: 20px; padding: 14px 0; border-top: 1px solid var(--line);
+    }
+    .gate span { color: var(--muted); }
+    .gate strong { text-align: right; }
+    .timeline { display: grid; gap: 0; }
+    .timeline-item { position: relative; padding: 0 0 28px 34px; border-left: 1px solid rgba(90,155,230,.25); }
+    .timeline-item:last-child { border-left-color: transparent; padding-bottom: 0; }
+    .timeline-item::before {
+      content: ""; position: absolute; left: -6px; top: 4px; width: 11px; height: 11px; border-radius: 50%;
+      background: var(--blue); box-shadow: 0 0 0 5px rgba(49,132,255,.1);
+    }
+    .timeline-item.done::before { background: var(--green); box-shadow: 0 0 0 5px rgba(67,209,123,.1); }
+    .timeline-item h3 { margin: 0 0 5px; font-size: 1rem; }
+    .timeline-item p { margin: 0; font-size: .88rem; }
+
+    .capital {
+      background:
+        radial-gradient(circle at 10% 30%, rgba(49,132,255,.10), transparent 24rem),
+        linear-gradient(180deg, transparent, rgba(255,255,255,.015));
+    }
+    .capital-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .capital-card {
+      padding: 34px; border-radius: var(--radius); border: 1px solid var(--line); background: rgba(10,24,41,.78);
+    }
+    .capital-card h3 { font-size: 1.45rem; }
+    .capital-card p { color: var(--muted); }
+    .capital-card.good { border-color: rgba(67,209,123,.22); }
+    .capital-card.bad { border-color: rgba(255,107,117,.22); }
+    .capital-card ul { margin: 20px 0 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+    .capital-card li { padding-left: 22px; position: relative; color: #c6d3e2; }
+    .capital-card li::before { content: "•"; position: absolute; left: 2px; color: var(--cyan); }
+
+    .ask {
+      padding-bottom: 120px;
+    }
+    .ask-card {
+      position: relative; overflow: hidden; padding: clamp(32px, 6vw, 72px);
+      border: 1px solid rgba(75,145,245,.28); border-radius: 30px;
+      background: linear-gradient(135deg, rgba(27,62,106,.74), rgba(8,23,40,.92));
+      box-shadow: var(--shadow);
+    }
+    .ask-card::after {
+      content: ""; position: absolute; width: 420px; aspect-ratio: 1; right: -180px; bottom: -260px;
+      border: 1px solid rgba(57,216,209,.2); border-radius: 50%;
+      box-shadow: 0 0 0 45px rgba(49,132,255,.035), 0 0 0 90px rgba(49,132,255,.025);
+    }
+    .ask-card > * { position: relative; z-index: 2; }
+    .ask-card h2 { max-width: 820px; }
+    .ask-card > p { max-width: 760px; color: #c5d5e7; font-size: 1.08rem; }
+    .ask-points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 30px 0; }
+    .ask-point { padding: 16px; border: 1px solid var(--line); border-radius: 14px; background: rgba(5,16,29,.34); color: #dce8f5; font-size: .9rem; }
+
+    footer {
+      padding: 28px 0; border-top: 1px solid var(--line); color: #71849b; font-size: .82rem;
+    }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+
+    .reveal { opacity: 0; transform: translateY(18px); transition: .65s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    @media (max-width: 1000px) {
+      nav { display: none; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-system { min-height: 500px; }
+      .manifesto-grid, .stage-layout { grid-template-columns: 1fr; }
+      .process { grid-template-columns: repeat(2, 1fr); }
+      .proof-grid { grid-template-columns: repeat(2, 1fr); }
+      .difference-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 680px) {
+      .wrap { width: min(100% - 24px, var(--max)); }
+      .brand-name, .status { display: none; }
+      .hero { padding-top: 56px; gap: 24px; }
+      .hero-system { transform: scale(.73); margin: -65px 0; }
+      section { padding: 70px 0; }
+      .process, .proof-grid, .difference-grid, .capital-grid, .ask-points { grid-template-columns: 1fr; }
+      .step { min-height: auto; }
+      .metric { min-height: 150px; }
+      .gate { display: grid; gap: 4px; }
+      .gate strong { text-align: left; }
+      h1 { font-size: clamp(3.15rem, 17vw, 5rem); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .001ms !important; scroll-behavior: auto !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+
+  <header class="site-header">
+    <div class="header-inner wrap">
+      <a class="brand" href="#inicio">
+        <span class="brand-mark">AQ/1</span>
+        <span class="brand-name">AQGrip · Presentación ejecutiva</span>
+      </a>
+      <nav aria-label="Navegación">
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#evidencia">Evidencia</a>
+        <a href="#diferencia">Diferencia</a>
+        <a href="#estado">Estado</a>
+      </nav>
+      <span class="status">Live Shadow</span>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <div class="hero wrap">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Trading sistemático · Investigación aplicada · Control de riesgo</p>
+          <h1>Decidir con <span>evidencia</span>, no con promesas.</h1>
+          <p class="hero-lead">AQGrip es una plataforma de investigación y control para detectar oportunidades de mercado, calcular su viabilidad después de todos los costos y validarlas en simulación antes de permitir que el capital asuma riesgo.</p>
+          <div class="hero-truth">
+            <strong>La verdad primero.</strong>
+            <span>No promete rentabilidad, no vende señales milagrosas y no modifica el riesgo para fabricar resultados atractivos.</span>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="#como-funciona">Entender AQGrip</a>
+            <a class="btn secondary" href="#estado">Ver el estado actual</a>
+          </div>
+        </div>
+
+        <div class="hero-system reveal" aria-label="Sistema AQGrip">
+          <div class="system-glow"></div>
+          <div class="orbit">
+            <span>Mercado público</span>
+            <span>Costos reales</span>
+            <span>Riesgo</span>
+            <span>Evidencia Paper</span>
+          </div>
+          <div class="orbit two">
+            <span>Libro L2</span>
+            <span>Funding</span>
+            <span>Persistencia</span>
+            <span>Auditoría</span>
+          </div>
+          <div class="core">
+            <div>
+              <strong>AQGrip</strong>
+              <small>Observar · medir · validar · proteger</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="manifesto" id="proposito">
+      <div class="wrap manifesto-grid">
+        <p class="statement reveal">El mercado está lleno de personas que monetizan el relato. AQGrip busca monetizar únicamente una <strong>ventaja demostrable</strong>.</p>
+        <div class="anti-list">
+          <article class="anti reveal">
+            <b>×</b><div><h3>No es un curso</h3><p>No depende de vender formación, comunidades ni acceso a “señales exclusivas”.</p></div>
+          </article>
+          <article class="anti reveal">
+            <b>×</b><div><h3>No es una caja negra</h3><p>Cada decisión conserva sus costos, datos, motivo de entrada, salida y descarte.</p></div>
+          </article>
+          <article class="anti reveal">
+            <b>×</b><div><h3>No confunde actividad con progreso</h3><p>Rechazar una operación sin ventaja es una función del sistema, no una oportunidad perdida.</p></div>
+          </article>
+          <article class="anti reveal">
+            <b>×</b><div><h3>No pone la IA al mando del dinero</h3><p>La IA puede explicar y analizar; las reglas cuantitativas y de riesgo conservan la autoridad.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Cómo funciona</p>
+          <h2>Un embudo que obliga a la oportunidad a sobrevivir.</h2>
+          <p>La plataforma no parte de “¿qué podemos comprar?”. Parte de “¿qué escenario sigue siendo favorable después de fricción, tiempo y riesgo?”.</p>
+        </div>
+
+        <div class="process">
+          <article class="step reveal">
+            <div class="step-icon">01</div>
+            <h3>Observa</h3>
+            <p>Lee información pública del mercado y libros de órdenes sin usar credenciales de trading.</p>
+          </article>
+          <article class="step reveal">
+            <div class="step-icon">02</div>
+            <h3>Calcula</h3>
+            <p>Mide basis, funding, profundidad, precisión, spread, fees, slippage y capital requerido.</p>
+          </article>
+          <article class="step reveal">
+            <div class="step-icon">03</div>
+            <h3>Filtra</h3>
+            <p>Descarta automáticamente cualquier caso cuyo beneficio no compense sus costos y riesgos.</p>
+          </article>
+          <article class="step reveal">
+            <div class="step-icon">04</div>
+            <h3>Simula</h3>
+            <p>Ejecuta una operación Paper con datos vivos y confirma fills; no asume que una orden fue ejecutada.</p>
+          </article>
+          <article class="step reveal">
+            <div class="step-icon">05</div>
+            <h3>Aprende</h3>
+            <p>Conserva resultados comparables para mejorar configuraciones dentro de límites inmutables.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof" id="evidencia">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Evidencia disponible</p>
+          <h2>Más ingeniería que espectáculo.</h2>
+          <p>El proyecto ya superó la etapa de una idea escrita. Hoy procesa datos vivos, simula ejecución y documenta tanto las oportunidades como los rechazos.</p>
+        </div>
+
+        <div class="proof-grid">
+          <article class="metric reveal">
+            <strong>365<span class="unit">+</span></strong>
+            <p>pruebas automatizadas sobre estrategia, contabilidad, persistencia, riesgo y presentación.</p>
+          </article>
+          <article class="metric reveal">
+            <strong>4</strong>
+            <p>mercados en Live L2 Shadow seleccionados por evidencia histórica: AVAX, ENA, MON y PURR.</p>
+          </article>
+          <article class="metric reveal">
+            <strong>100<span class="unit">%</span></strong>
+            <p>Paper durante la validación Live Shadow: datos públicos reales, capital completamente simulado.</p>
+          </article>
+          <article class="metric reveal">
+            <strong>0</strong>
+            <p>órdenes reales durante esta fase. La ejecución con capital está separada y bloqueada.</p>
+          </article>
+        </div>
+        <p class="proof-note reveal">Los resultados históricos y Paper son evidencia de investigación, no garantía de rendimiento futuro ni autorización para operar capital.</p>
+      </div>
+    </section>
+
+    <section id="diferencia">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Qué lo diferencia</p>
+          <h2>Diseñado para sobrevivir a la realidad del mercado.</h2>
+        </div>
+
+        <div class="difference-grid">
+          <article class="difference-card reveal"><em>01 · COST-FIRST</em><h3>Primero descuenta, luego celebra</h3><p>Una señal solo avanza después de fees, spread, slippage, funding y buffers conservadores.</p></article>
+          <article class="difference-card reveal"><em>02 · FAIL-CLOSED</em><h3>La duda bloquea</h3><p>Datos incompletos, estados ambiguos o discrepancias contables detienen el flujo.</p></article>
+          <article class="difference-card reveal"><em>03 · LIVE SHADOW</em><h3>Simulación con fricción viva</h3><p>El libro L2 público permite observar profundidad y ejecución potencial sin exponer capital.</p></article>
+          <article class="difference-card reveal"><em>04 · AUDITABLE</em><h3>Cada resultado se puede explicar</h3><p>El sistema separa P&amp;L de cada pierna, funding y costos para evitar utilidades ficticias.</p></article>
+          <article class="difference-card reveal"><em>05 · NON-CUSTODIAL</em><h3>El capital conserva dueño</h3><p>La arquitectura objetivo separa análisis, autorización y ejecución; no necesita custodiar fondos de terceros.</p></article>
+          <article class="difference-card reveal"><em>06 · MODULAR</em><h3>Un núcleo, varios mercados</h3><p>La visión extiende investigación, riesgo y observabilidad a nuevos instrumentos sin mezclar conectores con estrategia.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="estado">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Estado y camino</p>
+          <h2>El proyecto está vivo, pero aún no está terminado.</h2>
+          <p>La prioridad no es encender órdenes reales rápidamente. Es reducir la distancia entre un buen backtest y una ejecución sostenible.</p>
+        </div>
+
+        <div class="stage-layout">
+          <article class="stage-panel reveal">
+            <span class="stage-now">Fase actual · Live L2 Shadow</span>
+            <h3>Validación económica con datos vivos</h3>
+            <p>AQGrip monitorea mercados seleccionados, abre y cierra posiciones simuladas y contrasta la ventaja teórica con la fricción observada.</p>
+            <div class="gate-list">
+              <div class="gate"><span>Trading real</span><strong>Bloqueado</strong></div>
+              <div class="gate"><span>Capital en riesgo</span><strong>0 durante Shadow</strong></div>
+              <div class="gate"><span>Criterio de avance</span><strong>Consistencia neta y operativa</strong></div>
+              <div class="gate"><span>Decisión ante error</span><strong>Detener y reconciliar</strong></div>
+            </div>
+          </article>
+
+          <article class="stage-panel reveal">
+            <div class="timeline">
+              <div class="timeline-item done"><h3>Base de investigación</h3><p>Backtesting, contabilidad canónica, costos y pruebas automatizadas.</p></div>
+              <div class="timeline-item done"><h3>Monitor público y Paper</h3><p>Detección de oportunidades, persistencia y dashboard de lectura.</p></div>
+              <div class="timeline-item done"><h3>Live L2 Shadow</h3><p>Validación continua con profundidad pública y fills simulados.</p></div>
+              <div class="timeline-item"><h3>Canary controlado</h3><p>Una exposición mínima, límites estrictos y cierre de emergencia; solo después de aprobar Shadow.</p></div>
+              <div class="timeline-item"><h3>Producto no custodial</h3><p>Servicio de análisis, control de riesgo y alertas con fondos bajo control de cada usuario.</p></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="capital" id="capital">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Capital y oportunidad</p>
+          <h2>Más capital amplía el campo. No crea la ventaja.</h2>
+          <p>El capital es una condición operativa importante, pero no es la pieza que convierte automáticamente a AQGrip en rentable.</p>
+        </div>
+
+        <div class="capital-grid">
+          <article class="capital-card good reveal">
+            <h3>Lo que sí permite más capital</h3>
+            <ul>
+              <li>Cumplir mínimos por pierna sin consumir toda la reserva.</li>
+              <li>Evaluar más mercados y posiciones sin concentrar el riesgo.</li>
+              <li>Reducir el impacto relativo de mínimos operativos.</li>
+              <li>Crear un ecosistema con mejores límites y diversificación.</li>
+            </ul>
+          </article>
+          <article class="capital-card bad reveal">
+            <h3>Lo que el capital no soluciona</h3>
+            <ul>
+              <li>Una estrategia sin edge neto después de costos.</li>
+              <li>Datos insuficientes o ejecución poco realista.</li>
+              <li>Liquidez deficiente, slippage o riesgo de una sola pierna.</li>
+              <li>La necesidad de validar consistencia fuera de muestra.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ask" id="conversacion">
+      <div class="wrap">
+        <article class="ask-card reveal">
+          <p class="eyebrow">La conversación que buscamos</p>
+          <h2>No buscamos un cheque ciego. Buscamos criterio que acelere una validación responsable.</h2>
+          <p>La oportunidad de AQGrip no está en parecer otro bot. Está en construir una capa verificable entre el ruido del mercado y el dinero de las personas.</p>
+          <div class="ask-points">
+            <div class="ask-point">Revisión estratégica del modelo y sus supuestos.</div>
+            <div class="ask-point">Criterios independientes para diseñar un piloto.</div>
+            <div class="ask-point">Lectura del producto, mercado y ruta de crecimiento.</div>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="mailto:alejandro.qa@gmail.com?subject=Conversación%20sobre%20AQGrip">Conversemos sobre AQGrip</a>
+            <a class="btn secondary" href="#inicio">Volver al inicio</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner wrap">
+      <span>AQ/1 · AQGrip · Presentación ejecutiva</span>
+      <span>Investigación en desarrollo · No constituye asesoría financiera</span>
+    </div>
+  </footer>
+
+  <script>
+    const progress = document.getElementById('progress');
+    const updateProgress = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      progress.style.width = (max > 0 ? scrollY / max * 100 : 0) + '%';
+    };
+    addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
