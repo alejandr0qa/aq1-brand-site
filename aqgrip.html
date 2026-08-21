@@ -75,10 +75,11 @@
     }
     .status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 16px var(--green); }
 
+    #inicio { padding: 0; }
     .hero {
-      min-height: calc(100vh - 76px);
-      display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 56px;
-      padding: 72px 0 76px;
+      min-height: auto;
+      display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 48px;
+      padding: 54px 0 72px;
     }
     .eyebrow {
       margin: 0 0 18px; color: var(--cyan); font-size: .8rem; font-weight: 800;
@@ -87,7 +88,7 @@
     h1, h2, h3, p { margin-top: 0; }
     h1 {
       max-width: 760px; margin-bottom: 22px;
-      font-size: clamp(2.75rem, 5vw, 4.65rem); line-height: 1.01; letter-spacing: -.048em;
+      font-size: clamp(2.65rem, 4.25vw, 4rem); line-height: 1.01; letter-spacing: -.048em;
     }
     h1 span { color: transparent; background: linear-gradient(100deg, #fffaf1 5%, #f2b458 55%, #8bd3dd); background-clip: text; }
     .hero-lead { max-width: 730px; color: #d7deea; font-size: clamp(1.13rem, 2vw, 1.42rem); line-height: 1.62; }
