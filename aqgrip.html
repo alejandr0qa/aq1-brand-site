@@ -75,10 +75,11 @@
     }
     .status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 16px var(--green); }
 
+    #inicio { padding: 0; }
     .hero {
-      min-height: calc(100vh - 76px);
-      display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 56px;
-      padding: 72px 0 76px;
+      min-height: auto;
+      display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 48px;
+      padding: 54px 0 72px;
     }
     .eyebrow {
       margin: 0 0 18px; color: var(--cyan); font-size: .8rem; font-weight: 800;
@@ -87,7 +88,7 @@
     h1, h2, h3, p { margin-top: 0; }
     h1 {
       max-width: 760px; margin-bottom: 22px;
-      font-size: clamp(2.75rem, 5vw, 4.65rem); line-height: 1.01; letter-spacing: -.048em;
+      font-size: clamp(2.65rem, 4.25vw, 4rem); line-height: 1.01; letter-spacing: -.048em;
     }
     h1 span { color: transparent; background: linear-gradient(100deg, #fffaf1 5%, #f2b458 55%, #8bd3dd); background-clip: text; }
     .hero-lead { max-width: 730px; color: #d7deea; font-size: clamp(1.13rem, 2vw, 1.42rem); line-height: 1.62; }
@@ -186,14 +187,26 @@
     .step p { position: relative; z-index: 1; margin: 0; color: var(--muted); font-size: .88rem; }
 
     .proof { background: var(--bg-deep); border-block: 1px solid var(--line); }
-    .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-    .metric {
-      min-height: 188px; padding: 24px; border: 1px solid var(--line); border-radius: 20px;
-      background: var(--panel);
-    }
-    .metric strong { display: block; margin-bottom: 10px; font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1; letter-spacing: -.05em; color: #fff; }
-    .metric .unit { color: var(--blue); }
-    .metric p { margin: 0; color: var(--muted); font-size: .9rem; }
+    .evidence-layout { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(280px, .65fr); gap: 18px; align-items: start; }
+    .evidence-card { padding: 26px; border: 1px solid var(--line); border-radius: 20px; background: var(--panel); }
+    .evidence-card h3 { margin-bottom: 8px; font-size: 1.22rem; }
+    .evidence-card > p { color: var(--muted); font-size: .91rem; }
+    .evidence-table-wrap { overflow-x: auto; margin-top: 18px; }
+    .evidence-table { width: 100%; border-collapse: collapse; min-width: 660px; }
+    .evidence-table th, .evidence-table td { padding: 12px 10px; border-bottom: 1px solid var(--line); text-align: right; font-size: .84rem; white-space: nowrap; }
+    .evidence-table th { color: #8fa2b8; font-weight: 750; }
+    .evidence-table th:first-child, .evidence-table td:first-child { text-align: left; }
+    .evidence-table .positive { color: var(--green); font-weight: 800; }
+    .shadow-result { display: grid; gap: 12px; margin: 20px 0; }
+    .shadow-result div { display: flex; justify-content: space-between; gap: 20px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+    .shadow-result span { color: var(--muted); }
+    .shadow-result strong { text-align: right; }
+    .evidence-band { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 18px; }
+    .evidence-point { min-height: 132px; padding: 20px; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,.025); }
+    .evidence-point strong { display: block; margin-bottom: 8px; color: #fff; font-size: 1.25rem; }
+    .evidence-point p { margin: 0; color: var(--muted); font-size: .84rem; line-height: 1.5; }
+    .evidence-point.caution { border-color: rgba(242,163,58,.26); }
+    .evidence-point.closed { border-color: rgba(67,209,123,.22); }
     .proof-note { margin-top: 22px; color: #889bb2; font-size: .84rem; }
 
     .difference-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -283,7 +296,8 @@
       .hero-system { min-height: 500px; }
       .manifesto-grid, .stage-layout { grid-template-columns: 1fr; }
       .process { grid-template-columns: repeat(2, 1fr); }
-      .proof-grid { grid-template-columns: repeat(2, 1fr); }
+      .evidence-layout { grid-template-columns: 1fr; }
+      .evidence-band { grid-template-columns: 1fr 1fr; }
       .difference-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 680px) {
@@ -292,9 +306,8 @@
       .hero { padding-top: 56px; gap: 24px; }
       .hero-system { transform: scale(.73); margin: -65px 0; }
       section { padding: 70px 0; }
-      .process, .proof-grid, .difference-grid, .capital-grid, .ask-points { grid-template-columns: 1fr; }
+      .process, .difference-grid, .capital-grid, .ask-points, .evidence-band { grid-template-columns: 1fr; }
       .step { min-height: auto; }
-      .metric { min-height: 150px; }
       .gate { display: grid; gap: 4px; }
       .gate strong { text-align: left; }
       h1 { font-size: clamp(2.35rem, 10.8vw, 3.25rem); line-height: 1.04; }
@@ -426,30 +439,70 @@
     <section class="proof" id="evidencia">
       <div class="wrap">
         <div class="section-head reveal">
-          <p class="eyebrow">Evidencia disponible</p>
-          <h2>Más ingeniería que espectáculo.</h2>
-          <p>El proyecto ya superó la etapa de una idea escrita. Hoy procesa datos vivos, simula ejecución y documenta tanto las oportunidades como los rechazos.</p>
+          <p class="eyebrow">Evidencia económica disponible</p>
+          <h2>Resultados preliminares, con contexto y límites.</h2>
+          <p>Separamos la prueba final fuera de muestra de la ejecución Live L2 Shadow. No usamos métricas de software como sustituto de desempeño de mercado.</p>
         </div>
 
-        <div class="proof-grid">
-          <article class="metric reveal">
-            <strong>365<span class="unit">+</span></strong>
-            <p>pruebas automatizadas sobre estrategia, contabilidad, persistencia, riesgo y presentación.</p>
+        <div class="evidence-layout">
+          <article class="evidence-card reveal">
+            <h3>Prueba final OOS · Paper auditado</h3>
+            <p>Configuración elegida antes de la prueba final. Capital y operaciones son simulados; los escenarios STRESS y SEVERE elevan las fricciones.</p>
+            <div class="evidence-table-wrap">
+              <table class="evidence-table">
+                <thead><tr><th>Escenario</th><th>Operaciones</th><th>P&amp;L neto</th><th>PF</th><th>Win rate</th><th>DD máx.</th></tr></thead>
+                <tbody>
+                  <tr><td>15m · BASE</td><td>127</td><td class="positive">+12.5201 USDC</td><td>3.61</td><td>75.59%</td><td>1.3731</td></tr>
+                  <tr><td>15m · SEVERE</td><td>111</td><td class="positive">+7.3910 USDC</td><td>2.16</td><td>53.15%</td><td>1.3836</td></tr>
+                  <tr><td>30m · BASE</td><td>162</td><td class="positive">+23.0198 USDC</td><td>5.77</td><td>74.69%</td><td>1.0367</td></tr>
+                  <tr><td>30m · SEVERE</td><td>147</td><td class="positive">+10.5737 USDC</td><td>2.38</td><td>54.42%</td><td>1.2773</td></tr>
+                </tbody>
+              </table>
+            </div>
           </article>
-          <article class="metric reveal">
-            <strong>4</strong>
-            <p>mercados en Live L2 Shadow seleccionados por evidencia histórica: AVAX, ENA, MON y PURR.</p>
-          </article>
-          <article class="metric reveal">
-            <strong>100<span class="unit">%</span></strong>
-            <p>Paper durante la validación Live Shadow: datos públicos reales, capital completamente simulado.</p>
-          </article>
-          <article class="metric reveal">
-            <strong>0</strong>
-            <p>órdenes reales durante esta fase. La ejecución con capital está separada y bloqueada.</p>
+
+          <article class="evidence-card reveal">
+            <h3>Live L2 Shadow · muestra actual</h3>
+            <p>Primera operación cerrada con libros públicos en vivo. Es evidencia operativa, pero una sola observación no permite inferir rentabilidad.</p>
+            <div class="shadow-result">
+              <div><span>Operaciones cerradas</span><strong>1</strong></div>
+              <div><span>P&amp;L bruto</span><strong>+0.2164 USDC</strong></div>
+              <div><span>Costos estimados</span><strong>−0.2133 USDC</strong></div>
+              <div><span>P&amp;L neto</span><strong class="positive">+0.0031 USDC</strong></div>
+            </div>
+            <p class="proof-note">Lectura honesta: el resultado fue positivo, pero casi todo el edge fue absorbido por costos.</p>
           </article>
         </div>
-        <p class="proof-note reveal">Los resultados históricos y Paper son evidencia de investigación, no garantía de rendimiento futuro ni autorización para operar capital.</p>
+
+        <div class="evidence-band">
+          <article class="evidence-point closed reveal">
+            <strong>289 / 289</strong>
+            <p>Operaciones OOS conciliadas sin discrepancias contables entre Spot, short perpetuo, funding y costos.</p>
+          </article>
+          <article class="evidence-point reveal">
+            <strong>4 mercados</strong>
+            <p>AVAX, ENA, MON y PURR contribuyeron positivamente en ambas pruebas finales de 15m y 30m.</p>
+          </article>
+          <article class="evidence-point caution reveal">
+            <strong>Evidencia pendiente</strong>
+            <p>Sharpe/Sortino y una muestra Live Shadow suficiente aún no se publican. No se reemplazan con cantidad de tests.</p>
+          </article>
+        </div>
+
+        <div class="evidence-band">
+          <article class="evidence-point closed reveal">
+            <strong>Fórmula vigente verificada</strong>
+            <p>La observación sobre cancelación de funding está resuelta en <code>main</code>: bruto = convergencia + funding firmado; neto = bruto − costos totales.</p>
+          </article>
+          <article class="evidence-point caution reveal">
+            <strong>Sin promesa de retorno</strong>
+            <p>GO_ECONOMIC aplica al modelo Paper auditado. No autoriza trading real ni garantiza que el comportamiento persista.</p>
+          </article>
+          <article class="evidence-point reveal">
+            <strong>Próxima prueba</strong>
+            <p>Acumular suficientes cierres Live L2 para contrastar P&amp;L, costo realizado, drawdown y estabilidad fuera del replay histórico.</p>
+          </article>
+        </div>
       </div>
     </section>
 
