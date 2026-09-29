@@ -30,8 +30,94 @@
     .proof-card strong{display:block;font-size:1.8rem;margin-bottom:.3rem}
     .remote-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.25rem}
     .section-note{max-width:780px}
-    @media (max-width:900px){.remote-grid,.project-grid,.proof-grid{grid-template-columns:1fr 1fr}.availability{grid-template-columns:1fr 1fr}}
-    @media (max-width:640px){.remote-grid,.project-grid,.proof-grid,.availability{grid-template-columns:1fr}}
+    /* Remote profile hero: balanced desktop layout */
+    body { --max: 1280px; }
+    .hero {
+      min-height: auto;
+      grid-template-columns: minmax(0, 1.08fr) minmax(420px, .92fr);
+      gap: 64px;
+      align-items: center;
+      padding: 74px 38px 88px;
+    }
+    .hero-copy { max-width: 690px; }
+    .hero h1 {
+      font-size: clamp(3.25rem, 5.1vw, 4.85rem);
+      line-height: .98;
+      max-width: 100%;
+      margin-top: 12px;
+    }
+    .hero-role {
+      margin-top: 22px;
+      max-width: 680px;
+      font-size: clamp(1.4rem, 2vw, 2rem);
+      line-height: 1.22;
+      font-weight: 750;
+      color: var(--text);
+    }
+    .lead {
+      max-width: 660px;
+      margin-top: 24px;
+      font-size: clamp(1.02rem, 1.35vw, 1.22rem);
+      line-height: 1.65;
+    }
+    .remote-kicker {
+      margin-bottom: 4px;
+      color: #cbd5e1;
+      background: rgba(255,255,255,.045);
+    }
+    .hero-actions { margin-top: 28px; }
+    .hero-visual {
+      width: min(100%, 500px);
+      min-height: 460px;
+      justify-self: end;
+      border-radius: 34px;
+    }
+    .hero-visual::before { inset: 48px; }
+    .hero-visual::after { inset: 96px; }
+    .visual-core { width: 190px; height: 190px; }
+    .visual-core strong { font-size: 1.85rem; }
+    .visual-core small { font-size: .9rem; max-width: 150px; }
+    .orbit { padding: 9px 14px; font-size: .95rem; }
+    .orbit-a { top: 62px; left: 42px; }
+    .orbit-b { top: 126px; right: 34px; }
+    .orbit-c { bottom: 108px; left: 32px; }
+    .orbit-d { bottom: 56px; right: 58px; }
+
+    @media (max-width:1050px){
+      body { --max: 980px; }
+      .site-header .brand-name { display:none; }
+      .hero { grid-template-columns: 1fr .82fr; gap: 34px; padding-inline: 24px; }
+      .hero h1 { font-size: clamp(3rem, 6vw, 4.25rem); }
+      .hero-visual { min-height: 410px; }
+      .visual-core { width: 170px; height: 170px; }
+      .orbit-a { left: 24px; }
+      .orbit-b { right: 22px; }
+      .orbit-c { left: 20px; }
+      .orbit-d { right: 32px; }
+    }
+    @media (max-width:900px){
+      .remote-grid,.project-grid,.proof-grid{grid-template-columns:1fr 1fr}
+      .availability{grid-template-columns:1fr 1fr}
+      .hero { grid-template-columns: 1fr; padding: 54px 18px 68px; gap: 38px; }
+      .hero-copy { max-width: 760px; }
+      .hero-visual { width: 100%; max-width: 620px; justify-self: center; min-height: 420px; }
+    }
+    @media (max-width:640px){
+      .remote-grid,.project-grid,.proof-grid,.availability{grid-template-columns:1fr}
+      .hero { padding-inline: 4px; }
+      .hero h1 { font-size: clamp(2.6rem, 13vw, 3.5rem); }
+      .hero-role { font-size: 1.35rem; }
+      .lead { font-size: 1rem; line-height: 1.58; }
+      .hero-visual { min-height: 360px; border-radius: 26px; }
+      .visual-core { width: 150px; height: 150px; }
+      .visual-core strong { font-size: 1.55rem; }
+      .visual-core small { font-size: .78rem; max-width: 120px; }
+      .orbit { font-size: .82rem; padding: 8px 11px; }
+      .orbit-a { top: 42px; left: 18px; }
+      .orbit-b { top: 94px; right: 14px; }
+      .orbit-c { bottom: 82px; left: 12px; }
+      .orbit-d { bottom: 38px; right: 18px; }
+    }
   </style>
 </head>
 <body data-title-es="AQ/1 - Alejandro Quintero | Soporte TI Remoto" data-title-en="AQ/1 - Alejandro Quintero | Remote IT Support">
