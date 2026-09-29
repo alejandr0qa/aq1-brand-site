@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AQ/1 - Alejandro Quintero | Remote IT Support</title>
+  <meta name="description" content="Remote IT Support and Infrastructure profile of Alejandro Quintero: Windows, networking, Microsoft 365, hardware, troubleshooting, infrastructure and automation." />
+  <meta name="author" content="Alejandro Quintero Andrade" />
+  <meta property="og:title" content="AQ/1 - Alejandro Quintero | Remote IT Support" />
+  <meta property="og:description" content="Hands-on remote IT support, infrastructure, networking, troubleshooting and automation." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#10151f" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=20260722-aq1" />
+  <link rel="stylesheet" href="styles.css?v=20260722-hero-fix" />
+  <link rel="stylesheet" href="fixes.css?v=20260722-hero-fix" />
+  <link rel="stylesheet" href="profile-general.css?v=2" />
+  <style>
+    .remote-kicker{display:inline-flex;gap:.55rem;align-items:center;padding:.5rem .8rem;border:1px solid rgba(255,255,255,.12);border-radius:999px;background:rgba(255,255,255,.04);font-size:.92rem}
+    .remote-kicker::before{content:"";width:.55rem;height:.55rem;border-radius:50%;background:#6ee7b7;box-shadow:0 0 18px rgba(110,231,183,.65)}
+    .remote-grid,.project-grid,.proof-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+    .remote-card,.project-card,.proof-card{padding:1.35rem;border:1px solid rgba(255,255,255,.1);border-radius:18px;background:rgba(255,255,255,.035)}
+    .remote-card h3,.project-card h3,.proof-card h3{margin:.25rem 0 .65rem}
+    .remote-card p,.project-card p,.proof-card p{margin:0;color:var(--muted,#b8c2d1)}
+    .tag-row{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1rem}
+    .tag{padding:.45rem .7rem;border-radius:999px;border:1px solid rgba(255,255,255,.12);font-size:.88rem;background:rgba(255,255,255,.03)}
+    .availability{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.8rem;margin-top:1.25rem}
+    .availability div{padding:1rem;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:rgba(255,255,255,.03)}
+    .availability strong{display:block;font-size:1.05rem;margin-bottom:.25rem}
+    .project-card .number{display:inline-block;font-weight:700;opacity:.7;margin-bottom:.5rem}
+    .proof-card strong{display:block;font-size:1.8rem;margin-bottom:.3rem}
+    .remote-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.25rem}
+    .section-note{max-width:780px}
+    @media (max-width:900px){.remote-grid,.project-grid,.proof-grid{grid-template-columns:1fr 1fr}.availability{grid-template-columns:1fr 1fr}}
+    @media (max-width:640px){.remote-grid,.project-grid,.proof-grid,.availability{grid-template-columns:1fr}}
+  </style>
+</head>
+<body data-title-es="AQ/1 - Alejandro Quintero | Soporte TI Remoto" data-title-en="AQ/1 - Alejandro Quintero | Remote IT Support">
+  <div class="progress" id="progress"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html" aria-label="AQ/1 home">
+      <span class="brand-mark">AQ/1</span>
+      <span class="brand-name">Alejandro Quintero</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" data-es="Menú" data-en="Menu">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <a href="#profile" data-es="Perfil" data-en="Profile">Profile</a>
+      <a href="#skills" data-es="Capacidades" data-en="Skills">Skills</a>
+      <a href="#projects" data-es="Proyectos" data-en="Projects">Projects</a>
+      <a href="#proof" data-es="Resultados" data-en="Proof">Proof</a>
+      <a href="#contact" data-es="Contacto" data-en="Contact">Contact</a>
+      <a href="index.html" data-es="Perfil Senior" data-en="Senior Profile">Senior Profile</a>
+    </nav>
+    <div class="language-switch" aria-label="Change language">
+      <button type="button" data-lang="es">ES</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="heroTitle">
+      <canvas id="network-canvas" aria-hidden="true"></canvas>
+      <div class="hero-copy reveal">
+        <p class="remote-kicker" data-es="Disponible para trabajo remoto · hasta 30 h/semana · GMT-5" data-en="Available for remote work · up to 30 hrs/week · GMT-5">Available for remote work · up to 30 hrs/week · GMT-5</p>
+        <h1 id="heroTitle">Alejandro Quintero</h1>
+        <p class="hero-role" data-es="Soporte TI Remoto · Infraestructura · Redes · Windows · Microsoft 365" data-en="Remote IT Support · Infrastructure · Networks · Windows · Microsoft 365">Remote IT Support · Infrastructure · Networks · Windows · Microsoft 365</p>
+        <p class="lead" data-es="Profesional de TI práctico y orientado a resolver problemas, con experiencia real en soporte a usuarios, hardware, redes, conectividad, servidores, Microsoft 365, continuidad y automatización. Puedo integrarme a equipos remotos que necesiten una persona autónoma, organizada y capaz de llevar un incidente desde el diagnóstico hasta el cierre." data-en="Hands-on IT professional focused on solving problems, with real experience in user support, hardware, networking, connectivity, servers, Microsoft 365, continuity and automation. I can join remote teams that need someone autonomous, organized and able to take an incident from diagnosis through resolution.">Hands-on IT professional focused on solving problems, with real experience in user support, hardware, networking, connectivity, servers, Microsoft 365, continuity and automation. I can join remote teams that need someone autonomous, organized and able to take an incident from diagnosis through resolution.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects" data-es="Ver experiencia real" data-en="See real project experience">See real project experience</a>
+          <a class="btn secondary" href="#contact" data-es="Contactar" data-en="Contact">Contact</a>
+        </div>
+      </div>
+
+      <aside class="hero-visual reveal" aria-label="Remote IT focus">
+        <div class="visual-core">
+          <span class="core-label">AQ/1</span>
+          <strong data-es="Resolver" data-en="Resolve">Resolve</strong>
+          <small data-es="Soporte · Redes · Windows · Automatización" data-en="Support · Networks · Windows · Automation">Support · Networks · Windows · Automation</small>
+        </div>
+        <div class="orbit orbit-a"><span>Windows</span></div>
+        <div class="orbit orbit-b"><span>Networks</span></div>
+        <div class="orbit orbit-c"><span>Support</span></div>
+        <div class="orbit orbit-d"><span>Automation</span></div>
+      </aside>
+    </section>
+
+    <section class="identity section" id="profile">
+      <div class="section-intro reveal">
+        <p class="eyebrow" data-es="Perfil remoto" data-en="Remote profile">Remote profile</p>
+        <h2 data-es="Experiencia suficiente para resolver, sin necesidad de una estructura compleja." data-en="Enough experience to solve problems without needing a complex structure.">Enough experience to solve problems without needing a complex structure.</h2>
+        <p class="section-note" data-es="He trabajado en soporte, infraestructura y operación TI desde 2013. Mi experiencia incluye atención a usuarios, resolución de incidentes, redes LAN/WAN/Wi-Fi, VPN, Windows, virtualización, almacenamiento, respaldos, Microsoft 365 y coordinación con proveedores. Para trabajos remotos mi enfoque es simple: entender el problema, documentarlo, resolverlo y dejar trazabilidad." data-en="I have worked in IT support, infrastructure and operations since 2013. My experience includes end-user support, incident resolution, LAN/WAN/Wi-Fi, VPN, Windows, virtualization, storage, backups, Microsoft 365 and vendor coordination. For remote work my approach is simple: understand the problem, document it, solve it and leave a clear trail.">I have worked in IT support, infrastructure and operations since 2013. My experience includes end-user support, incident resolution, LAN/WAN/Wi-Fi, VPN, Windows, virtualization, storage, backups, Microsoft 365 and vendor coordination. For remote work my approach is simple: understand the problem, document it, solve it and leave a clear trail.</p>
+        <div class="availability">
+          <div><strong>30 hrs/week</strong><span data-es="Disponibilidad objetivo" data-en="Target availability">Target availability</span></div>
+          <div><strong>GMT-5</strong><span data-es="Zona horaria Colombia" data-en="Colombia time zone">Colombia time zone</span></div>
+          <div><strong>Spanish</strong><span data-es="Nativo" data-en="Native">Native</span></div>
+          <div><strong>English B1</strong><span data-es="Soporte y documentación técnica" data-en="Technical support & documentation">Technical support & documentation</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cases section" id="skills">
+      <div class="section-intro reveal">
+        <p class="eyebrow" data-es="Capacidades" data-en="What I can handle">What I can handle</p>
+        <h2 data-es="Un perfil operativo para equipos que necesitan que las cosas funcionen." data-en="An operational profile for teams that need things to work.">An operational profile for teams that need things to work.</h2>
+      </div>
+      <div class="remote-grid">
+        <article class="remote-card reveal"><h3>Remote User Support</h3><p data-es="Diagnóstico, soporte a usuarios, resolución de incidentes, acceso remoto, configuración y documentación." data-en="Troubleshooting, end-user support, incident resolution, remote access, configuration and documentation.">Troubleshooting, end-user support, incident resolution, remote access, configuration and documentation.</p></article>
+        <article class="remote-card reveal"><h3>Windows & Microsoft 365</h3><p data-es="Soporte de estaciones Windows, cuentas, accesos, aplicaciones de oficina y servicios de colaboración." data-en="Support for Windows workstations, accounts, access, office applications and collaboration services.">Support for Windows workstations, accounts, access, office applications and collaboration services.</p></article>
+        <article class="remote-card reveal"><h3>Networks & Connectivity</h3><p data-es="LAN, WAN, WLAN, Wi-Fi, VPN, routers, switches, access points y análisis de problemas de conectividad." data-en="LAN, WAN, WLAN, Wi-Fi, VPN, routers, switches, access points and connectivity troubleshooting.">LAN, WAN, WLAN, Wi-Fi, VPN, routers, switches, access points and connectivity troubleshooting.</p></article>
+        <article class="remote-card reveal"><h3>Hardware & Infrastructure</h3><p data-es="Equipos de usuario, servidores, almacenamiento NAS, virtualización, respaldos y continuidad de servicios." data-en="End-user devices, servers, NAS storage, virtualization, backups and service continuity.">End-user devices, servers, NAS storage, virtualization, backups and service continuity.</p></article>
+        <article class="remote-card reveal"><h3>Security Basics</h3><p data-es="Fortinet, Sophos, endpoint, controles de acceso, buenas prácticas de seguridad y gestión de incidentes." data-en="Fortinet, Sophos, endpoint controls, access management, security practices and incident handling.">Fortinet, Sophos, endpoint controls, access management, security practices and incident handling.</p></article>
+        <article class="remote-card reveal"><h3>Automation & Documentation</h3><p data-es="Automatización con n8n y APIs, documentación operativa, seguimiento de tareas y reducción de trabajo repetitivo." data-en="Automation with n8n and APIs, operational documentation, task tracking and reduction of repetitive work.">Automation with n8n and APIs, operational documentation, task tracking and reduction of repetitive work.</p></article>
+      </div>
+      <div class="tag-row reveal">
+        <span class="tag">Windows</span><span class="tag">Microsoft 365</span><span class="tag">VPN</span><span class="tag">Wi-Fi</span><span class="tag">LAN/WAN</span><span class="tag">VMware</span><span class="tag">NAS</span><span class="tag">Fortinet</span><span class="tag">Sophos</span><span class="tag">n8n</span><span class="tag">APIs</span><span class="tag">ITSM</span>
+      </div>
+    </section>
+
+    <section class="cases section" id="projects">
+      <div class="section-intro reveal">
+        <p class="eyebrow" data-es="Experiencia demostrable" data-en="Selected project experience">Selected project experience</p>
+        <h2 data-es="No solo herramientas: problemas reales que ya he resuelto." data-en="Not just tools: real problems I have already solved.">Not just tools: real problems I have already solved.</h2>
+        <p class="section-note" data-es="Estos ejemplos resumen proyectos y operaciones en los que participé directamente. Se presentan sin información confidencial de las organizaciones." data-en="These examples summarize projects and operations I directly worked on. They are presented without confidential organizational information.">These examples summarize projects and operations I directly worked on. They are presented without confidential organizational information.</p>
+      </div>
+      <div class="project-grid">
+        <article class="project-card reveal">
+          <span class="number">01</span>
+          <h3 data-es="Soporte distribuido a 240+ ubicaciones" data-en="Distributed support for 240+ locations">Distributed support for 240+ locations</h3>
+          <p data-es="Coordiné soporte tecnológico y de conectividad para una operación distribuida con aproximadamente 240 puntos de venta, atendiendo redes, POS, usuarios, incidentes y escalamiento." data-en="Coordinated technology and connectivity support for a distributed operation of approximately 240 points of sale, covering networks, POS systems, users, incidents and escalation.">Coordinated technology and connectivity support for a distributed operation of approximately 240 points of sale, covering networks, POS systems, users, incidents and escalation.</p>
+        </article>
+        <article class="project-card reveal">
+          <span class="number">02</span>
+          <h3 data-es="Continuidad durante una contingencia crítica" data-en="Business continuity during a critical event">Business continuity during a critical event</h3>
+          <p data-es="Participé en la recuperación de servicios tecnológicos tras una contingencia física de sede y en la habilitación de puestos de trabajo remotos, manteniendo la integridad de la información y recuperando la operación." data-en="Worked on restoring technology services after a physical site disruption and enabling remote workstations, while preserving information integrity and restoring operations.">Worked on restoring technology services after a physical site disruption and enabling remote workstations, while preserving information integrity and restoring operations.</p>
+        </article>
+        <article class="project-card reveal">
+          <span class="number">03</span>
+          <h3 data-es="Redes seguras y conectividad" data-en="Secure networking and connectivity">Secure networking and connectivity</h3>
+          <p data-es="Implementé y administré conectividad con VPN, SD-WAN y firewalls empresariales, mejorando visibilidad, acceso entre sedes y continuidad de los servicios." data-en="Implemented and managed connectivity using VPN, SD-WAN and enterprise firewalls, improving visibility, site-to-site access and service continuity.">Implemented and managed connectivity using VPN, SD-WAN and enterprise firewalls, improving visibility, site-to-site access and service continuity.</p>
+        </article>
+        <article class="project-card reveal">
+          <span class="number">04</span>
+          <h3 data-es="Automatización de procesos con n8n" data-en="Process automation with n8n">Process automation with n8n</h3>
+          <p data-es="Construí flujos locales con n8n, APIs y almacenamiento compartido para automatizar tareas repetitivas, generación de documentos, notificaciones y trazabilidad operativa." data-en="Built local workflows using n8n, APIs and shared storage to automate repetitive tasks, document generation, notifications and operational traceability.">Built local workflows using n8n, APIs and shared storage to automate repetitive tasks, document generation, notifications and operational traceability.</p>
+        </article>
+        <article class="project-card reveal">
+          <span class="number">05</span>
+          <h3 data-es="Infraestructura y respaldo" data-en="Infrastructure and backup operations">Infrastructure and backup operations</h3>
+          <p data-es="Administré servidores, virtualización, NAS, respaldos y servicios corporativos, con foco en disponibilidad, recuperación y documentación de la operación." data-en="Managed servers, virtualization, NAS, backups and corporate services with a focus on availability, recovery and operational documentation.">Managed servers, virtualization, NAS, backups and corporate services with a focus on availability, recovery and operational documentation.</p>
+        </article>
+        <article class="project-card reveal">
+          <span class="number">06</span>
+          <h3 data-es="Optimización de costos TI" data-en="IT cost optimization">IT cost optimization</h3>
+          <p data-es="Participé en iniciativas que redujeron costos de telecomunicaciones en más de 40% y servicios cloud en aproximadamente 30%, manteniendo la continuidad del servicio." data-en="Worked on initiatives that reduced telecommunications costs by more than 40% and cloud service costs by approximately 30% while maintaining service continuity.">Worked on initiatives that reduced telecommunications costs by more than 40% and cloud service costs by approximately 30% while maintaining service continuity.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="impact section" id="proof">
+      <div class="section-intro reveal">
+        <p class="eyebrow" data-es="Prueba rápida" data-en="Quick proof">Quick proof</p>
+        <h2 data-es="Experiencia que se puede aterrizar a trabajo remoto desde el primer día." data-en="Experience that translates directly into remote work from day one.">Experience that translates directly into remote work from day one.</h2>
+      </div>
+      <div class="proof-grid">
+        <article class="proof-card reveal"><strong>2013+</strong><p data-es="Trayectoria en servicios y operación TI." data-en="Track record in IT services and operations.">Track record in IT services and operations.</p></article>
+        <article class="proof-card reveal"><strong>240+</strong><p data-es="Puntos de venta / sedes soportadas." data-en="Points of sale / supported sites.">Points of sale / supported sites.</p></article>
+        <article class="proof-card reveal"><strong>40%+</strong><p data-es="Reducción lograda en telecomunicaciones." data-en="Telecommunications cost reduction achieved.">Telecommunications cost reduction achieved.</p></article>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="contact-card reveal">
+        <p class="eyebrow" data-es="Contacto" data-en="Contact">Contact</p>
+        <h2 data-es="¿Necesitas soporte TI remoto confiable sin agregar complejidad?" data-en="Need reliable remote IT support without adding complexity?">Need reliable remote IT support without adding complexity?</h2>
+        <p data-es="Disponible para contratos remotos de medio tiempo, soporte recurrente, proyectos de infraestructura y tareas técnicas por demanda." data-en="Available for part-time remote contracts, recurring support, infrastructure projects and on-demand technical work.">Available for part-time remote contracts, recurring support, infrastructure projects and on-demand technical work.</p>
+        <div class="remote-actions">
+          <a class="btn primary" href="mailto:alejandro.qa@gmail.com">alejandro.qa@gmail.com</a>
+          <a class="btn secondary" href="index.html" data-es="Ver perfil completo" data-en="View full profile">View full profile</a>
+          <a class="btn secondary" href="trayectoria.html" data-es="Ver trayectoria" data-en="View career">View career</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><em>AQ/1 - Alejandro Quintero</em><span data-es="Soporte remoto · infraestructura · redes · automatización" data-en="Remote support · infrastructure · networks · automation">Remote support · infrastructure · networks · automation</span></footer>
+  <script src="script.js?v=profile-general-2"></script>
+  <script src="network-canvas.js"></script>
+  <script>
+    try {
+      if (!localStorage.getItem('aq1-lang')) {
+        localStorage.setItem('aq1-lang','en');
+        document.documentElement.lang='en';
+      }
+    } catch(e) {}
+  </script>
+</body>
+</html>
