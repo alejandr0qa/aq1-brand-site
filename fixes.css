@@ -10,8 +10,8 @@ body::after {
   position: relative;
   isolation: isolate;
   min-height: auto;
-  padding-top: 118px;
-  padding-bottom: 110px;
+  padding-top: 76px;
+  padding-bottom: 52px;
 }
 
 .hero::before {
@@ -56,15 +56,15 @@ body::after {
 
 @media (max-width: 980px) {
   .hero {
-    padding-top: 96px;
-    padding-bottom: 78px;
+    padding-top: 70px;
+    padding-bottom: 46px;
   }
 }
 
 @media (max-width: 680px) {
   .hero {
-    padding-top: 82px;
-    padding-bottom: 64px;
+    padding-top: 64px;
+    padding-bottom: 36px;
   }
 
   .hero::before {
