@@ -1,7 +1,7 @@
 /* AQ/1 - Trayectoria profesional dinámica y legible */
 
 .career-page .career-hero {
-  padding: 92px 0 62px;
+  padding: 68px 0 42px;
 }
 
 .career-page .career-hero h1 {
@@ -44,7 +44,7 @@
 }
 
 .career-layout {
-  padding-top: 64px;
+  padding-top: 36px;
 }
 
 .career-section {
@@ -307,19 +307,20 @@
 
 @media (max-width: 680px) {
   .career-page .career-hero {
-    padding: 78px 0 54px;
+    padding: 52px 0 32px;
   }
 
   .career-page .career-hero h1 {
-    font-size: clamp(2.35rem, 11vw, 3rem);
+    font-size: clamp(2.15rem, 9.5vw, 2.75rem);
   }
 
   .career-quicknav {
-    gap: 7px;
+    gap: 6px;
   }
 
   .career-quicknav a {
-    font-size: 0.82rem;
+    font-size: 0.8rem;
+    padding: 6px 10px;
   }
 
   .career-columns {
@@ -329,12 +330,25 @@
   .career-role summary,
   .career-panel,
   .career-contact {
-    padding-left: 18px;
-    padding-right: 18px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .career-role summary {
+    min-height: 72px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .career-role-body {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 18px;
   }
 
   .contribution-item {
-    grid-template-columns: 34px 1fr;
-    gap: 12px;
+    grid-template-columns: 32px 1fr;
+    gap: 10px;
+    padding: 16px 0;
   }
 }

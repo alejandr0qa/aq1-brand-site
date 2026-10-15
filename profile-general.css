@@ -81,25 +81,26 @@ li {
 }
 
 .capability-card {
-  padding: 26px;
+  padding: 22px;
   border-radius: var(--radius);
   background: var(--surface-2);
   border: 1px solid var(--line);
   box-shadow: 0 14px 36px rgba(17,24,39,0.08);
 }
 
-.capability-card > span {
+.capability-card > em {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
-  margin-bottom: 18px;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 14px;
   border-radius: 50%;
   background: rgba(17,24,39,0.07);
   color: #80520d;
   font-size: 0.82rem;
   font-weight: 900;
+  font-style: normal;
 }
 
 .capability-card h3 {
@@ -119,7 +120,7 @@ li {
 
 .formation-summary article,
 .formation-groups article {
-  padding: 26px;
+  padding: 22px;
   border-radius: var(--radius);
   background: var(--surface-2);
   border: 1px solid var(--line);
@@ -151,7 +152,7 @@ li {
 }
 
 .formation-card {
-  padding: 26px;
+  padding: 22px;
   border-radius: var(--radius);
   background: var(--surface-2);
   border: 1px solid var(--line);
@@ -196,8 +197,8 @@ li {
 
 .platform-card {
   position: relative;
-  min-height: 230px;
-  padding: 26px 26px 30px;
+  min-height: auto;
+  padding: 22px 22px 26px;
   border-radius: var(--radius);
   background: var(--surface-2);
   border: 1px solid var(--line);
@@ -353,8 +354,8 @@ li {
   }
 
   .hero {
-    padding-top: 82px !important;
-    padding-bottom: 64px !important;
+    padding-top: 64px !important;
+    padding-bottom: 36px !important;
   }
 
   .language-switch {
@@ -363,9 +364,19 @@ li {
 
   .capability-grid,
   .formation-summary,
-  .formation-groups,
-  .platform-grid {
+  .formation-groups {
     grid-template-columns: 1fr;
+  }
+
+  .capability-card,
+  .formation-card,
+  .platform-card {
+    padding: 18px;
+  }
+
+  .platform-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 
   .platform-card {
@@ -375,6 +386,12 @@ li {
   .career-item {
     grid-template-columns: 1fr;
     gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .platform-grid {
+    grid-template-columns: 1fr;
   }
 }
 
